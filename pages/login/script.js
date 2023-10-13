@@ -8,8 +8,8 @@ function verificar(){
     fetch('../../assets/userExemple.json')
         .then(Response => Response.json())
         .then(data => {
-            if(email == data.email && senha == data.senha){
-                window.location.href = "../inicial/index.html";
+            if(email == data.uemail && senha == data.usenha){
+                window.location.href = "../bemVindo/index.html";
             }
             else{
                 alert("E-mail ou senha inválido(a)!");

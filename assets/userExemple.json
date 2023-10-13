@@ -1,5 +1,9 @@
 {
-    "nome": "Shawlin Matador de Porco",
-    "email": "user@mail.com",
-    "senha": "docedeleite"
+    "unome": "Shawlin Matador de Porco",
+    "uemail": "user@mail.com",
+    "usenha": "docedeleite",
+    "admnome": "Michael Scott",
+    "admemail":"adm@mail.com",
+    "admsenha": "ufms2023"
 }
+
