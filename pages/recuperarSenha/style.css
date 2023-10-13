@@ -106,18 +106,17 @@ button:active {
     display: block;
     font-family: 'Quicksand', sans-serif;
     font-size: 1.2em;
-    margin: 20% 10% 10% 10%;
+    margin: 20% 10% 5% 10%;
     color: #F5F0BB;
     align-items: center;
     justify-content: center;
 
 }
 
-.entrar{
+.recuperar{
     display: flex;
-    margin-right: 10%;
-    align-items:end;
-    justify-content: right;
+    align-items:center;
+    justify-content: center;
 
 }
 
