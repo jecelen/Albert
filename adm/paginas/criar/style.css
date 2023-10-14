@@ -195,3 +195,8 @@ label[for="nomeQuiz"], label[for="categoria"] {
     margin-top: 20px; 
   }
 }
+
+#btn-novapergunta:hover, #btn-finalizarquiz:hover{
+    background-color: #F5F0BB;
+    color: #292D32;
+}
