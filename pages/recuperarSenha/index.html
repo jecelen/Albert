@@ -1,33 +1,45 @@
 <!DOCTYPE html>
 <html lang="pt-br">
+  <head>
+    <link href="style.css" rel="stylesheet" type="text/css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Quicksand&display=swap"
+      rel="stylesheet"
+    />
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width-initial-scale=100%" />
+    <script src="script.js"></script>
+    <title>Login: Albert</title>
+  </head>
 
-<head>
-  <link href="style.css" rel="stylesheet" type="text/css">
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Quicksand&display=swap" rel="stylesheet">
-  <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width-initial-scale=100%">
-  <script src="script.js"></script>
-  <title>Login: Albert</title>
-</head>
-
-<body>
+  <body>
     <div class="page">
       <div class="esq">
-        <div class="voltar"><button class="botaoIcone" type="button" onclick="voltar()"><img src="../../assets/icone_voltar.png" alt="Icone Voltar">Voltar</button></div>
+        <div class="voltar">
+          <button class="botaoIcone" type="button" onclick="voltar()">
+            <img src="../../assets/icone_voltar.png" alt="Icone Voltar" />Voltar
+          </button>
+        </div>
         <div class="form">
           <label for="email">Digite seu e-mail:</label>
-          <input type="email" id="email" name="email" required><br><br>
+          <input type="email" id="email" name="email" required /><br /><br />
         </div>
-        <div class="recuperar"><button type="button" onclick="confirmacao()">Recuperar Senha</button></div>
+        <div class="recuperar">
+          <button type="button" onclick="confirmacao()">Recuperar Senha</button>
+        </div>
       </div>
       <div class="dir">
         <div class="divlogo">
-          <img class= "logo" src="../../assets/LogoTransparente.png" alt="Logo Albert">
+          <img
+            class="logo"
+            src="../../assets/LogoTransparente.png"
+            alt="Logo Albert"
+          />
         </div>
       </div>
     </div>
-</body>
+  </body>
 </html>

@@ -1,3 +1,3 @@
-function voltar(){
-    window.location.href = "../inicial/index.html"
+function voltar() {
+  window.location.href = "../inicial/index.html";
 }

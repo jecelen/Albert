@@ -1,24 +1,7 @@
 body {
   background-color: #001c30;
-  background-image: url(background.png);
-  background-repeat: no-repeat;
-  background-position: right;
-  background-size: contain;
 }
 
-button {
-  border: none;
-  background-color: #00e1bc;
-  text-align: center;
-  color: #f5f0bb;
-  font-size: 1.5em;
-  margin: 4px 2px;
-  cursor: pointer;
-  border-radius: 12px;
-  font-weight: bold;
-  font-family: "roboto";
-  transition-duration: 0.4s;
-}
 .container {
   display: flex;
   align-items: center;
@@ -29,33 +12,66 @@ button {
   height: 50vh;
 }
 
-.bigBotao {
+.bigBotaoB {
   border: none;
   background-color: #f5f0bb;
   text-align: center;
-  color: #000000;
-  font-size: 1.5em;
+  justify-content: center;
+  color: #00e1bc;
+  font-size: 1.5rem;
   cursor: pointer;
   border-radius: 12px;
-  padding: 15% 0% 15% 0%;
-  width: 70%;
+  padding: 7% 0% 7% 0%;
+  width: 20%;
   font-weight: bold;
   font-family: "roboto";
   transition-duration: 0.4s;
 }
-.bigBotao img {
+
+.bigBotaoA {
+  border: none;
+  background-color: #00e1bc;
+  text-align: center;
+  justify-content: center;
+  color: #f5f0bb;
+  font-size: 1.5rem;
+  cursor: pointer;
+  border-radius: 12px;
+  padding: 7% 0% 7% 0%;
+  width: 20%;
+  font-weight: bold;
+  font-family: "roboto";
+  transition-duration: 0.4s;
+  margin: 2%;
+}
+
+.bigBotaoA img {
   height: 80%;
-  width: 100%;
+  width: 70%;
   justify-self: center;
   text-align: center;
-  vertical-align: top;
+  vertical-align: start;
+}
+
+.bigBotaoB img {
+  height: 80%;
+  width: 45%;
+  justify-self: center;
+  text-align: center;
+  vertical-align: start;
+}
+
+#bio {
+  padding: 8% 0% 8% 0%;
+}
+#esp {
+  padding: 7.5% 0% 7.5% 0%;
 }
 
 .botaoIcone {
   border: none;
   background-color: #f5f0bb;
   padding: 2%;
-  text-align: center;
   color: #000000;
   font-size: 1.3em;
   margin: 4px 2px;
@@ -66,8 +82,8 @@ button {
   transition-duration: 0.4s;
 }
 
-button img {
-  height: 80%;
+.botaoIcone img {
+  height: 100%;
   width: 30%;
   padding-right: 8%;
   justify-self: start;
@@ -77,9 +93,18 @@ button img {
   background-color: #00e1bc; /* Green */
   color: #f5f0bb;
 }
-.bigBotao:hover {
-  background-color: #00e1bc; /* Green */
-  color: #f5f0bb;
+.bigBotaoA:hover {
+  background-color: #001c30; /* Green */
+  color: #b3af87;
+  border: #f5f0bb 2px outset;
+  border-radius: 4px;
+}
+
+.bigBotaoB:hover {
+  background-color: #001c30; /* Green */
+  color: #b3af87;
+  border: #f5f0bb 2px outset;
+  border-radius: 4px;
 }
 
 .botaoPerfil:hover {
@@ -93,11 +118,7 @@ button:active {
 }
 
 .logo {
-  width: 16em;
-}
-.botaoPerfil img {
-  height: 100%;
-  width: 60%;
+  width: 14em;
 }
 
 .botaoPerfil {
@@ -108,13 +129,18 @@ button:active {
   cursor: pointer;
   transition-duration: 0.4s;
 }
+.botaoPerfil img {
+  height: 100%;
+  width: 60%;
+}
 
 .page {
   display: block;
-  color: #f5f0bb;
+  text-align: center;
+  color: #00e1bc;
   height: 97vh;
   width: 100%;
-  font-family: "Quicksand", sans-serif;
+  font-family: "Overlock SC", sans-serif;
 }
 
 .divlogo {
@@ -130,7 +156,9 @@ header {
   align-items: center;
 }
 .botoesheader {
+  text-align: right;
+  display: flex;
   align-items: center;
   width: 100%;
-  text-align: right;
+  justify-content: end;
 }
