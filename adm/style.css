@@ -66,6 +66,7 @@ button{
     font-size: 1.875rem;
     font-weight: 600;
     text-shadow: 0.125rem 0.125rem 0.125rem rgba(75, 75, 75, 0.5);
+    box-shadow: rgba(0, 0, 0, 0.4) 0px 2px 4px, rgba(0, 0, 0, 0.3) 0px 7px 13px -3px, rgba(0, 0, 0, 0.2) 0px -3px 0px inset;
     background-color: #F5F0BB;
     color: #292D32;
     border-radius: 0.75rem;
