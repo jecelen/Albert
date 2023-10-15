@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <link href="style.css" rel="stylesheet" type="text/css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Quicksand&display=swap"
+      rel="stylesheet"
+    />
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width-initial-scale=100%" />
+    <script src="script.js"></script>
+    <title>Bem-vindo: Albert</title>
+  </head>
+
+  <body>
+    <header>
+      <div class="divlogo">
+        <img class="logo" src="../../assets/Albert.png" alt="Logo Albert" />
+      </div>
+      <div class="botoesheader">
+        <button class="botaoIcone" type="button" onclick="sair()">
+          <img src="../../assets/logout.png" alt="Icone Sair" />Sair
+        </button>
+        <button class="botaoPerfil" type="button" onclick="meuPerfil()">
+          <img src="../../assets/user.png" alt="Icone Perfil" />
+        </button>
+      </div>
+    </header>
+    <div class="page">
+      <p>Seja Bem Vindo,</p>
+      <div class="container">
+        <div class="esq">
+          <button class="bigBotao" type="button" onclick="iniciarJogo()">
+            <img src="perguntas.png" alt="Icone Novo Jogo" />Novo Jogo
+          </button>
+        </div>
+        <div class="dir">
+          <button class="bigBotao" type="button" onclick="verRanking()">
+            <img src="../../assets/ranking.png" alt="Icone Ranking" />Ranking
+          </button>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
