@@ -1,0 +1,227 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;600;700&display=swap');
+
+/*Formatações gerais*/
+*{
+    margin: 0;
+    padding: 0;
+    font-family: 'Poppins', sans-serif;
+}
+
+
+body{
+    height: 100vh;
+    background-color: #001C30;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-repeat: no-repeat;
+    overflow-y: hidden; 
+}
+
+body::-webkit-scrollbar {
+    width: 8px;               
+  }
+  
+  body::-webkit-scrollbar-track {
+    background: #09273c;     
+  }
+
+  body::-webkit-scrollbar-thumb {
+    background-color: #00E1BC;   
+    border-radius: 20px;       
+    border: 3px solid #F5F0BB;  
+  }
+
+h2 {
+    position: absolute;
+    color: #292D32;
+    left: 3rem;
+    font-weight: 600;
+    text-shadow: 2px 2px 2px rgba(75, 75, 75, 0.5);
+    margin: 0; 
+    line-height: 4rem; 
+}
+
+h3 {
+    color: #F5F0BB;
+    font-weight: bold; 
+    margin: 10px 0; 
+    text-shadow: 2px 2px 2px rgba(152, 152, 152, 0.616);
+}
+
+.titulo {
+  background-color: #F5F0BB;
+  width: 100%;
+  height: 4rem; 
+  position: absolute;
+  top: 11rem; 
+}
+
+/*Formatações de botões*/
+button{
+    border: none;
+    cursor: pointer;
+    transition-duration: 0.4s;
+}
+
+#btn-perfil {
+    background-image: url("/Grupo_4_PW-T02-2023-2-main/assets/user.png");
+    width: 5rem; 
+    height: 5rem;
+    position: relative;
+    top: 2rem;
+    background-color: #001C30;
+    background-size: contain;
+}
+
+#btn-perfil:hover {
+    background-image: url("/Grupo_4_PW-T02-2023-2-main/assets/user_ativo.png");
+}
+
+#btn-sair {
+    background-image: url("/Grupo_4_PW-T02-2023-2-main/assets/logout2.png");
+    background-repeat: no-repeat;
+    background-position: right 20px center;
+    margin-right: 1rem;
+    padding: 8px;
+    padding-left: 20px;
+    width: 10rem; 
+    height: auto;
+    text-align: left;
+    font-size: 30px;
+    font-weight: 600;
+    text-shadow: 2px 2px 2px rgba(75, 75, 75, 0.5);
+    box-shadow: rgba(0, 0, 0, 0.4) 0px 2px 4px, rgba(0, 0, 0, 0.3) 0px 7px 13px -3px, rgba(0, 0, 0, 0.2) 0px -3px 0px inset;
+    background-color: #F5F0BB;
+    color: #292D32;
+    border-radius: 12px;
+}
+
+#btn-sair:hover {
+    background-image: url("/Grupo_4_PW-T02-2023-2-main/assets/logout_ativo.png");
+    background-color: #00E1BC;
+    color: #F5F0BB;
+    text-shadow: 2px 2px 2px rgba(75, 75, 75, 0.5);
+    
+}
+
+#btn-finalizar {
+  width: 10rem;
+  height: auto;
+  text-align: center;
+  font-size: 1.5625rem;
+  font-weight: 600;
+  text-shadow: 0.125rem 0.125rem 0.125rem rgba(75, 75, 75, 0.5);
+  box-shadow: rgba(0, 0, 0, 0.4) 0rem 2px 0.25rem, rgba(0, 0, 0, 0.3) 0px 7px 13px -3px, rgba(0, 0, 0, 0.2) 0px -3px 0px inset;
+  background-color: #F5F0BB;
+  color: #292D32;
+  border-radius: 12px;
+  position: fixed; 
+  padding: .3125rem;
+  bottom: 0;
+  right: 5%;
+}
+
+#btn-finalizar:hover {
+  background-color: #00E1BC;
+  color: #F5F0BB;
+  text-shadow: 2px 2px 2px rgba(75, 75, 75, 0.5);
+}
+
+button:active {
+    box-shadow: 0 5px #001C30;
+    transform: translateY(2px);
+}
+
+.botoes {
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+    margin-right: 3rem;
+}
+
+
+.logo {
+    position: absolute;
+    top: 1rem; 
+    left: 2.85rem; 
+    width: 17rem; 
+    height: auto; 
+}
+
+
+/*Formatações de tabela*/
+.quizzes{
+    margin-top: 13%;
+    max-height: 50vh; 
+    position: relative;
+    overflow-y: auto;
+    cursor: pointer;
+    
+}
+
+.selecionaQuiz {
+    padding-right: 40px; 
+    text-align: left; 
+    cursor: pointer;
+  }
+
+table {
+    border-collapse: collapse;
+    width: 100%;
+  }
+  
+  table, td {
+    border: none;
+    border-radius: .625rem; 
+  }
+  
+  td {
+    padding: .625rem;
+    width: 81.25rem;
+    text-align: left;
+  }
+  
+  tr:nth-child(even) {
+    background-color: #84815f;
+  }
+  
+  tr:nth-child(odd) {
+    background-color: #F5F0BB;
+  }
+  
+  tr:hover td {
+    text-decoration: underline;
+}
+
+/*scrollbar da tabela*/
+.quizzes::-webkit-scrollbar {
+  width: 8px;
+}
+
+.quizzes::-webkit-scrollbar-track {
+  background: #09273c;
+}
+
+.quizzes::-webkit-scrollbar-thumb {
+  background-color: #00E1BC;
+  border-radius: 20px;
+  border: 3px solid #F5F0BB;
+}
+
+.btn-deletar {
+  float: right; /* Mantenha-o à direita */
+  cursor: pointer;
+  background: transparent;
+  color: #b40404;
+  margin-left: -10px; /* Ajuste a margem esquerda para alinhá-lo mais à esquerda */
+}
+
+.btn-deletar:hover img {
+  transition: transform 0.2s;
+  transform: scale(1.1);
+}
+
+.perguntaTitulo{
+  cursor: pointer;
+}
