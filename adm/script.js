@@ -9,3 +9,7 @@ function paginaEditar() {
 function paginaDeletar() {
     window.location.href = "./paginas/deletar/index.html";
 }
+
+function sair() {
+    window.location.href = "/Grupo_4_PW-T02-2023-2-main/pages/inicial/index.html";
+  }
