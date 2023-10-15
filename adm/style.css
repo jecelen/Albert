@@ -117,6 +117,7 @@ button.criar, button.editar, button.deletar {
     font-weight: 700;
     font-size: 2rem;
     text-shadow: 0.125rem 0.125rem 0.125rem rgba(75, 75, 75, 0.5);
+    box-shadow: rgba(0, 0, 0, 0.4) 0px 2px 4px, rgba(0, 0, 0, 0.3) 0px 7px 13px -3px, rgba(0, 0, 0, 0.2) 0px -3px 0px inset;
     cursor: pointer;
     padding: 1.25rem;
     width: 21.875rem;
@@ -151,7 +152,8 @@ button.deletar {
 button.criar:hover, button.editar:hover, button.deletar:hover {
     background-color: #00E1BC;
     color: #F5F0BB;
-    box-shadow: 0.0625rem 0.3125rem 0.3125rem 0.3125rem #001C30;
+    box-shadow: rgb(38, 57, 77) 0px 20px 30px -10px;
+    /*box-shadow: 0.0625rem 0.3125rem 0.3125rem 0.3125rem #001C30;*/
 }
 
 button.criar:hover{
@@ -214,6 +216,12 @@ button.deletar:hover{
 
 
 }
+
+
+    
+
+
+   
 
 
     
