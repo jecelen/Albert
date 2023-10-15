@@ -35,6 +35,12 @@ button:active {
   width: 250px;
 }
 
+br,
+hr,
+.desafieMob {
+  display: none;
+}
+
 .page {
   display: inline-flex;
   height: 97vh;
@@ -82,4 +88,48 @@ p {
 
 img {
   width: 600px;
+}
+
+@media screen and (max-width: 768px) {
+  body {
+    background-image: none;
+  }
+  .esq {
+    display: none;
+  }
+
+  .botoes {
+    margin: 0%;
+  }
+  .desafieMob,
+  br {
+    display: inline-block;
+  }
+  .desafie {
+    display: none;
+  }
+  .dir {
+    margin-top: -50%;
+  }
+  .divlogo {
+    text-align: center;
+    width: 100%;
+    height: fit-content;
+    align-items: top;
+  }
+  .logo {
+    text-align: center;
+    width: 100%;
+    padding: 0% 20%;
+  }
+
+  p {
+    font-size: 30px;
+    text-align: center;
+  }
+  hr {
+    display: flex;
+    width: 60%;
+    border-style: dashed;
+  }
 }

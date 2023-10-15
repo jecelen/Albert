@@ -10,7 +10,7 @@
     />
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width-initial-scale=100%" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <script src="script.js"></script>
     <title>Bem-vindo: Albert</title>
   </head>
@@ -21,6 +21,9 @@
         <img class="logo" src="../../assets/Albert.png" alt="Logo Albert" />
       </div>
       <div class="botoesheader">
+        <button class="botaoIconeMobile" type="button" onclick="sair()">
+          <img src="../../assets/logout.png" alt="Icone Sair" />
+        </button>
         <button class="botaoIcone" type="button" onclick="sair()">
           <img src="../../assets/logout.png" alt="Icone Sair" />Sair
         </button>
@@ -31,6 +34,7 @@
     </header>
     <div class="page">
       <p>Seja Bem Vindo,</p>
+      <hr />
       <div class="container">
         <div class="esq">
           <button class="bigBotao" type="button" onclick="iniciarJogo()">

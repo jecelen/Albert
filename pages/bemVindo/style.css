@@ -1,9 +1,9 @@
 body {
   background-color: #001c30;
   background-image: url(background.png);
-  background-repeat: no-repeat;
-  background-position: right;
-  background-size: contain;
+  background-repeat: repeat;
+  background-position: left;
+  background-size: cover;
 }
 
 button {
@@ -26,7 +26,7 @@ button {
   justify-content: center;
   margin-top: 5%;
   width: 100%;
-  height: 50vh;
+  height: 50%;
 }
 
 .bigBotao {
@@ -38,7 +38,7 @@ button {
   cursor: pointer;
   border-radius: 12px;
   padding: 15% 0% 15% 0%;
-  width: 70%;
+  width: 65%;
   font-weight: bold;
   font-family: "roboto";
   transition-duration: 0.4s;
@@ -64,6 +64,10 @@ button {
   font-weight: bold;
   font-family: "roboto";
   transition-duration: 0.4s;
+}
+
+.botaoIconeMobile {
+  display: none;
 }
 
 button img {
@@ -108,7 +112,9 @@ button:active {
   cursor: pointer;
   transition-duration: 0.4s;
 }
-
+hr {
+  display: none;
+}
 .page {
   display: block;
   color: #f5f0bb;
@@ -133,4 +139,64 @@ header {
   align-items: center;
   width: 100%;
   text-align: right;
+}
+
+@media screen and (max-width: 768px) {
+  header {
+    display: block;
+    text-align: center;
+  }
+  .divlogo {
+    text-align: center;
+    width: 100%;
+  }
+  .logo {
+    text-align: center;
+    width: 100%;
+    padding: 0% 20%;
+  }
+  .botoesheader {
+    display: inline;
+    text-align: left;
+  }
+  .botaoIconeMobile {
+    display: inline;
+    border: none;
+    background-color: #f5f0bb;
+    padding: 2%;
+    text-align: center;
+    color: #000000;
+    margin: 10px 23px;
+    cursor: pointer;
+    border-radius: 12px;
+    font-weight: bold;
+    font-family: "roboto";
+    transition-duration: 0.4s;
+  }
+  .botaoIcone {
+    display: none;
+  }
+  p {
+    font-size: 30px;
+    text-align: center;
+  }
+  hr {
+    display: flex;
+    width: 60%;
+    border-style: dashed;
+  }
+  .container {
+    display: block;
+    margin-top: 20%;
+    width: 100%;
+  }
+  .bigBotao img {
+    width: 30%;
+  }
+  .bigBotao {
+    padding: 5%;
+    margin: 5%;
+    align-items: center;
+    text-align: center;
+  }
 }
