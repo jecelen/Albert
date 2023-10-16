@@ -3,7 +3,7 @@ body {
   background-image: url(background.png);
   background-repeat: no-repeat;
   background-position: left;
-  background-size: contain;
+  background-size: cover;
 }
 
 button {
@@ -72,7 +72,7 @@ button:active {
   height: 95%;
   align-items: center;
   justify-content: center;
-  width: 260vh;
+  width: 100%;
 }
 .esq {
   display: flex;
@@ -118,7 +118,66 @@ input {
   width: 100%;
   font-size: 1em;
   padding: 2% 5%;
-  margin: 2% 0;
+  margin: 1% 0;
   box-sizing: border-box;
   border-radius: 4px;
+}
+
+@media screen and (max-width: 768px) {
+  body {
+    background-image: url(Mobileback.png);
+    background-position: top;
+    background-size: cover;
+    align-items: start;
+    display: flex;
+  }
+
+  .page {
+    display: block;
+  }
+
+  .botoes {
+    margin: 0%;
+  }
+  .voltar {
+    display: none;
+  }
+  .form {
+    align-items: center;
+    width: 80%;
+    height: fit-content;
+    margin: 0%;
+    margin-top: 60%;
+    margin-left: 10%;
+    font-size: 20px;
+  }
+  .esq {
+    display: block;
+    align-items: center;
+    width: 100%;
+    height: fit-content;
+    justify-content: center;
+  }
+
+  .dir {
+    display: block;
+    width: 100%;
+    padding-top: 20%;
+  }
+
+  .divlogo {
+    text-align: center;
+    width: 100%;
+    display: flex;
+    align-items: start;
+    height: fit-content;
+  }
+  .logo {
+    display: flex;
+    height: fit-content;
+    text-align: center;
+    width: 100%;
+    padding: 0% 20%;
+    align-items: start;
+  }
 }

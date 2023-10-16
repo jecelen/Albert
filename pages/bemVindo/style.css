@@ -12,7 +12,6 @@ button {
   text-align: center;
   color: #f5f0bb;
   font-size: 1.5em;
-  margin: 4px 2px;
   cursor: pointer;
   border-radius: 12px;
   font-weight: bold;
@@ -37,7 +36,7 @@ button {
   font-size: 1.5em;
   cursor: pointer;
   border-radius: 12px;
-  padding: 15% 0% 15% 0%;
+  padding: 3% 0% 12% 0%;
   width: 65%;
   font-weight: bold;
   font-family: "roboto";
@@ -118,7 +117,7 @@ hr {
 .page {
   display: block;
   color: #f5f0bb;
-  height: 97vh;
+  height: 95vh;
   width: 100%;
   font-family: "Quicksand", sans-serif;
 }

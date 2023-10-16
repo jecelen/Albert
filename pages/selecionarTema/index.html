@@ -21,6 +21,9 @@
         <img class="logo" src="../../assets/Albert.png" alt="Logo Albert" />
       </div>
       <div class="botoesheader">
+        <button class="botaoIconeMobile" type="button" onclick="sair()">
+          <img src="../../assets/logout.png" alt="Icone Sair" />
+        </button>
         <button class="botaoIcone" type="button" onclick="sair()">
           <img src="../../assets/logout.png" alt="Icone Sair" />Sair
         </button>
@@ -32,40 +35,44 @@
     <div class="page">
       <h1>Selecione o tema</h1>
       <div class="container">
-        <button class="bigBotaoA" type="button" onclick="temaHistoria()">
-          História<br /><img
-            src="../../assets/historia.png"
-            alt="Icone história"
-          />
-        </button>
-        <button class="bigBotaoB" type="button" onclick="temaGeografia()">
-          <img
-            src="../../assets/geografia.png"
-            alt="Icone geografia"
-          /><br />Geografia
-        </button>
-        <button
-          class="bigBotaoA"
-          id="esp"
-          type="button"
-          onclick="temaEsportes()"
-        >
-          Esportes<br /><img
-            src="../../assets/esportes.png"
-            alt="Icone esportes"
-          />
-        </button>
-        <button
-          class="bigBotaoB"
-          id="bio"
-          type="button"
-          onclick="temaBiologia()"
-        >
-          <img
-            src="../../assets/biologia.png"
-            alt="Icone biologia"
-          /><br />Biologia
-        </button>
+        <div class="c1">
+          <button class="bigBotaoA" type="button" onclick="temaHistoria()">
+            História<br /><img
+              src="../../assets/historia.png"
+              alt="Icone história"
+            />
+          </button>
+          <button class="bigBotaoB" type="button" onclick="temaGeografia()">
+            <img
+              src="../../assets/geografia.png"
+              alt="Icone geografia"
+            /><br />Geografia
+          </button>
+        </div>
+        <div class="c2">
+          <button
+            class="bigBotaoA"
+            id="esp"
+            type="button"
+            onclick="temaEsportes()"
+          >
+            Esportes<br /><img
+              src="../../assets/esportes.png"
+              alt="Icone esportes"
+            />
+          </button>
+          <button
+            class="bigBotaoB"
+            id="bio"
+            type="button"
+            onclick="temaBiologia()"
+          >
+            <img
+              src="../../assets/biologia.png"
+              alt="Icone biologia"
+            /><br />Biologia
+          </button>
+        </div>
       </div>
     </div>
   </body>

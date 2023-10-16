@@ -3,7 +3,7 @@ body {
   background-image: url(background.png);
   background-repeat: no-repeat;
   background-position: right;
-  background-size: contain;
+  background-size: cover;
 }
 
 button {
@@ -62,24 +62,24 @@ button:active {
 
 .page {
   display: inline-flex;
-  height: 97vh;
+  height: 88vh;
   width: 100%;
   justify-content: center;
   align-items: center;
 }
 .esq {
   display: block;
-  height: 95%;
+  height: 90vh;
   align-items: center;
   justify-content: center;
-  width: 260vh;
+  width: 100%;
 }
 .dir {
   display: flex;
   width: 100%;
   align-items: center;
   justify-content: center;
-  height: max-content;
+  height: fit-content;
 }
 .divlogo {
   display: flex;
@@ -121,7 +121,7 @@ input {
   width: 100%;
   font-size: 1.25em;
   padding: 2% 5%;
-  margin: 2% 0;
+  margin: 0% 0;
   box-sizing: border-box;
   border-radius: 4px;
 }
