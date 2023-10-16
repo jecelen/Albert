@@ -5,3 +5,9 @@ function voltar() {
   function meuPerfil(){
     window.location.href = "../perfilUsuario/index.html";
   }
+
+ function Salvar() {
+    alert("Suas informações foram salvas com sucesso");
+    window.location.href = "../perfilUsuario/index.html";
+  }
+  
