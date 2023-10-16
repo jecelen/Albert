@@ -7,7 +7,7 @@ function desistencia(){
       window.location.href = "../bemVindo/index.html";  
   }
 
-  function desistencia(){
+  function conferirResp(){
     alert("Ainda não conseguimos conferir se a sua resposta está certa, por favor aguarde!");
     window.location.href = "../temaSelecionado/index.html";  
 }
