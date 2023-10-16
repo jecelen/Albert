@@ -1,0 +1,372 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;600;700&display=swap');
+
+/*Formatações gerais*/
+
+body {
+  /* height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;*/
+  padding: 0;
+  margin: 0;
+  background-color: #001C30;
+  overflow-x: hidden;
+}
+
+body::-webkit-scrollbar {
+  width: 8px;
+}
+
+body::-webkit-scrollbar-track {
+  background: #09273c;
+}
+
+body::-webkit-scrollbar-thumb {
+  background-color: #00E1BC;
+  border-radius: 20px;
+  border: 3px solid #F5F0BB;
+}
+
+h2 {
+  position: absolute;
+  color: #292D32;
+  left: 3rem;
+  font-weight: 600;
+  text-shadow: 2px 2px 2px rgba(75, 75, 75, 0.5);
+  margin: 0;
+  line-height: 4rem;
+}
+
+h3 {
+  color: #F5F0BB;
+  font-weight: bold;
+  /* Pode ajustar o valor do peso da fonte conforme necessário */
+  margin: 10px 0;
+  /* Espaçamento superior e inferior */
+  text-shadow: 2px 2px 2px rgba(152, 152, 152, 0.616);
+}
+
+.titulo {
+  background-color: #F5F0BB;
+  width: 100%;
+  height: 4rem;
+  position: absolute;
+  top: 11rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.titulo h2 {
+  display: flex;
+  align-items: center;
+  margin-left: 40px;
+}
+
+.titulo img {
+  width: 40px;
+  height: 40px;
+  margin-left: 20px;
+}
+
+
+/*Formatações de botões*/
+
+.divlogo {
+  display: flex;
+  float: inline;
+  align-items: center;
+  width: 100%;
+  justify-content: left;
+}
+
+.logo {
+  width: 16em;
+}
+
+header {
+  display: flex;
+  align-items: center;
+}
+
+
+button {
+  border: none;
+  background-color: #00e1bc;
+  text-align: center;
+  color: #f5f0bb;
+  font-size: 1.5em;
+  margin: .25rem .125rem;
+  cursor: pointer;
+  border-radius: .75rem;
+  font-weight: bold;
+  font-family: "roboto";
+  transition-duration: 0.4s;
+}
+
+.botaoPerfil img {
+  height: 100%;
+  width: 60%;
+}
+
+.botaoPerfil {
+  border: none;
+  background-color: #001c30;
+  text-align: center;
+  margin: 4px 2px;
+  cursor: pointer;
+  transition-duration: 0.4s;
+}
+
+
+.botaoIcone {
+  border: none;
+  background-color: #f5f0bb;
+  padding: 2%;
+  text-align: center;
+  color: #000000;
+  font-size: 1.3em;
+  margin: 4px 2px;
+  cursor: pointer;
+  border-radius: 12px;
+  font-weight: bold;
+  font-family: "roboto";
+  transition-duration: 0.4s;
+}
+
+button img {
+  height: 80%;
+  width: 30%;
+  padding-right: 8%;
+  justify-self: start;
+  vertical-align: middle;
+}
+
+.botaoIcone:hover {
+  background-color: #00e1bc;
+  /* Green */
+  color: #f5f0bb;
+}
+
+.botaoPerfil:hover {
+  opacity: 0.5;
+}
+
+button:active {
+  background-color: #b3af87;
+  box-shadow: 0 5px #001c30;
+  transform: translateY(2px);
+}
+
+.botoesheader {
+  align-items: center;
+  width: 100%;
+  text-align: right;
+  margin-top: 2.5rem;
+  /*talvez tirar*/
+}
+
+.logo {
+  position: absolute;
+  top: 1rem;
+  left: 5rem;
+  width: 17rem;
+  height: auto;
+}
+
+
+/*Formatações de botões de tema*/
+
+.container {
+  display: flex;
+  align-items: center;
+  text-align: center;
+  justify-content: center;
+  margin-top: 5%;
+  width: 100%;
+  height: 50vh;
+}
+
+
+.bigBotaoB {
+  border: none;
+  background-color: #f5f0bb;
+  text-align: center;
+  justify-content: center;
+  color: #00e1bc;
+  font-size: 1.5rem;
+  cursor: pointer;
+  border-radius: 12px;
+  padding: 7% 0% 7% 0%;
+  width: 20%;
+  font-weight: bold;
+  font-family: "roboto";
+  transition-duration: 0.4s;
+}
+
+.bigBotaoA {
+  border: none;
+  background-color: #00e1bc;
+  text-align: center;
+  justify-content: center;
+  color: #f5f0bb;
+  font-size: 1.5rem;
+  cursor: pointer;
+  border-radius: 12px;
+  padding: 7% 0% 7% 0%;
+  width: 20%;
+  font-weight: bold;
+  font-family: "roboto";
+  transition-duration: 0.4s;
+  margin: 2%;
+}
+
+.bigBotaoA img {
+  height: 80%;
+  width: 70%;
+  justify-self: center;
+  text-align: center;
+  vertical-align: start;
+}
+
+.bigBotaoB img {
+  height: 80%;
+  width: 45%;
+  justify-self: center;
+  text-align: center;
+  vertical-align: start;
+}
+
+#bio {
+  padding: 8% 0% 8% 0%;
+}
+
+#esp {
+  padding: 7.5% 0% 7.5% 0%;
+}
+
+.botaoIcone {
+  border: none;
+  background-color: #f5f0bb;
+  padding: 2%;
+  color: #000000;
+  font-size: 1.3em;
+  margin: 4px 2px;
+  cursor: pointer;
+  border-radius: 12px;
+  font-weight: bold;
+  font-family: "roboto";
+  transition-duration: 0.4s;
+}
+
+.botaoIcone img {
+  height: 100%;
+  width: 30%;
+  padding-right: 8%;
+  justify-self: start;
+  vertical-align: middle;
+}
+
+.botaoIcone:hover {
+  background-color: #00e1bc;
+  /* Green */
+  color: #f5f0bb;
+}
+
+.bigBotaoA:hover {
+  background-color: #001c30;
+  /* Green */
+  color: #b3af87;
+  border: #f5f0bb 2px outset;
+  border-radius: 4px;
+}
+
+.bigBotaoB:hover {
+  background-color: #001c30;
+  /* Green */
+  color: #b3af87;
+  border: #f5f0bb 2px outset;
+  border-radius: 4px;
+}
+
+.botaoPerfil:hover {
+  opacity: 0.5;
+}
+
+button:active {
+  background-color: #b3af87;
+  box-shadow: 0 5px #001c30;
+}
+
+.botaoPerfil {
+  border: none;
+  background-color: #001c30;
+  text-align: center;
+  margin: 4px 2px;
+  cursor: pointer;
+  transition-duration: 0.4s;
+}
+
+.botaoPerfil img {
+  height: 100%;
+  width: 60%;
+}
+
+.page {
+  display: block;
+  text-align: center;
+  color: #00e1bc;
+  height: 97vh;
+  width: 100%;
+  font-family: "Overlock SC", sans-serif;
+  margin-top: 12%;
+}
+
+.botoesheader {
+  text-align: right;
+  display: flex;
+  align-items: center;
+  width: 100%;
+  justify-content: end;
+}
+
+@media screen and (max-width: 768px) {
+  .divlogo {
+    width: 100%;
+  }
+
+  .logo {
+    width: 55%;
+    align-content: center;
+    align-items: center;
+    text-align: center;
+  }
+
+  .botoesheader {
+    width: 90%;
+    position: absolute;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    margin-top: 95%;
+    padding: 0% 5%;
+  }
+
+  .titulo {
+    width: 100%;
+    position: relative;
+    margin-top: 40%;
+    text-align: center;
+  }
+
+  .container {
+    display: flex;
+    flex-direction: column;
+    margin-top: 90%;
+  }
+
+  .bigBotaoA, .bigBotaoB {
+    width: 50%;
+  }
+}

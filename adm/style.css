@@ -1,0 +1,265 @@
+/*@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;600;700&display=swap');*/
+
+body {
+    background-color: #001c30;
+    background-image: url(../assets/background.jpg);
+    background-repeat: no-repeat;
+    background-position: right;
+    background-size: cover;
+
+  }
+  
+h2 {
+    font-family: "Quicksand", sans-serif;
+    position: absolute;
+    color: #8FE8AD;
+    top: 11.25rem;
+    left: 5.625rem;
+    font-weight: 300;
+}
+
+.divlogo {
+    display: flex;
+    float: inline;
+    align-items: center;
+    width: 100%;
+    justify-content: left;
+  }
+
+    .logo {
+    width: 16em;
+  }
+  
+  header {
+    display: flex;
+    align-items: center;
+  }
+
+
+button {
+    border: none;
+    background-color: #00e1bc;
+    text-align: center;
+    color: #f5f0bb;
+    font-size: 1.5em;
+    margin: .25rem .125rem;
+    cursor: pointer;
+    border-radius: .75rem;
+    font-weight: bold;
+    font-family: "roboto";
+    transition-duration: 0.4s;
+  }
+  
+  .botaoPerfil img {
+    height: 100%;
+    width: 60%;
+  }
+  
+  .botaoPerfil {
+    border: none;
+    background-color: #001c30;
+    text-align: center;
+    margin: 4px 2px;
+    cursor: pointer;
+    transition-duration: 0.4s;
+  }
+
+  
+.botaoIcone {
+    border: none;
+    background-color: #f5f0bb;
+    padding: 2%;
+    text-align: center;
+    color: #000000;
+    font-size: 1.3em;
+    margin: 4px 2px;
+    cursor: pointer;
+    border-radius: 12px;
+    font-weight: bold;
+    font-family: "roboto";
+    transition-duration: 0.4s;
+  }
+  
+  button img {
+    height: 80%;
+    width: 30%;
+    padding-right: 8%;
+    justify-self: start;
+    vertical-align: middle;
+  }
+  .botaoIcone:hover {
+    background-color: #00e1bc; /* Green */
+    color: #f5f0bb;
+  }
+  
+  .botaoPerfil:hover {
+    opacity: 0.5;
+  }
+  
+  button:active {
+    background-color: #b3af87;
+    box-shadow: 0 5px #001c30;
+    transform: translateY(2px);
+  }
+
+  .botoesheader {
+    align-items: center;
+    width: 100%;
+    text-align: right;
+    margin-top: 2.5rem; /*talvez tirar*/
+  }
+  
+.logo {
+    position: absolute;
+    top: 1rem; 
+    left: 5rem; 
+    width: 17rem; 
+    height: auto; 
+}
+
+.opcoes{
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    background: transparent;
+    border-radius: 0.1875rem;
+    margin-top: 12.5rem;
+}
+
+button.criar, button.editar, button.deletar {
+    margin: 0 3.75rem;
+    background: #F5F0BB;
+    color: #292D32;
+    border: none;
+    border-radius: 0.4375rem;
+    font-weight: 700;
+    font-size: 2rem;
+    text-shadow: 0.125rem 0.125rem 0.125rem rgba(75, 75, 75, 0.5);
+    box-shadow: rgba(0, 0, 0, 0.4) 0px 2px 4px, rgba(0, 0, 0, 0.3) 0px 7px 13px -3px, rgba(0, 0, 0, 0.2) 0px -3px 0px inset;
+    cursor: pointer;
+    padding: 1.25rem;
+    width: 21.875rem;
+    height: 18.75rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: end;
+}
+
+button.criar {
+    background-image: url('../assets/criar.png');
+    background-size: 11.25rem;
+    background-position: center 25%;
+    background-repeat: no-repeat;
+}
+
+button.editar {
+    background-image: url('../assets/editar.png');
+    background-size: 11.25rem;
+    background-position: center 25%;
+    background-repeat: no-repeat;
+}
+
+button.deletar {
+    background-image: url('../assets/deletar.png');
+    background-size: 11.25rem;
+    background-position: center 25%;
+    background-repeat: no-repeat;
+}
+
+button.criar:hover, button.editar:hover, button.deletar:hover {
+    background-color: #00E1BC;
+    color: #F5F0BB;
+    box-shadow: rgb(38, 57, 77) 0px 20px 30px -10px;
+    /*box-shadow: 0.0625rem 0.3125rem 0.3125rem 0.3125rem #001C30;*/
+}
+
+button.criar:hover{
+    background-image: url('../assets/criar_ativo.png');
+}
+
+button.editar:hover{
+    background-image: url('../assets/editar_ativo.png');
+}
+
+button.deletar:hover{
+    background-image: url('../assets/deletar_ativo.png');
+}
+
+.botaoIconeMobile {
+  display: none;
+}
+
+
+
+hr {
+  display: none;
+}
+
+
+/*Responsividade*/
+/*Celular*/
+@media screen and (max-width: 768px) {
+
+  body{
+      background-image: none;
+      width: 100%;
+    }
+    
+    .divlogo{
+      width: 100%;
+    }
+
+    .logo{
+      width: 55%;
+      align-content: center;
+      align-items: center;
+      text-align: center;
+    
+    }
+
+    .botoesheader {
+      width: 90%;
+      position: absolute;
+      display: flex;
+      flex-direction: row;
+      align-items: center; 
+      justify-content: center; /* Centralize os botões horizontalmente */
+      margin-top: 95%;
+      padding: 0% 5%;
+    }
+
+    .bemVindo {
+      width: 100%;
+      position: relative;
+      margin-top: 20%; /* Ajuste a margem superior para mover o texto para baixo */
+      text-align: center;
+  }
+
+    .opcoes {
+        width: 100%;
+        display: flex;
+        flex-direction: column; 
+        align-content: center;
+        justify-content: center;
+        align-items: center;
+        margin-top: 100%;
+    }
+
+    .opcoes button {
+        background-position: left 15% center;  
+        background-size: 50px;
+        margin-bottom: 7%;
+        width: 90%;
+        height: 10%;
+        padding-left: 20%;
+    }
+
+
+
+}
+
+    
+
+
+   

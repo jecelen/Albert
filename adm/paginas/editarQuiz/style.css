@@ -1,0 +1,288 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;600;700&display=swap');
+
+/*Formatações gerais*/
+body {
+  /* height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;*/
+  padding: 0;
+  margin: 0;
+  background-color: #001C30;
+  overflow-y: hidden;
+}
+
+
+body::-webkit-scrollbar {
+    width: 8px;               
+  }
+  
+  body::-webkit-scrollbar-track {
+    background: #09273c;     
+  }
+
+  body::-webkit-scrollbar-thumb {
+    background-color: #00E1BC;   
+    border-radius: 20px;       
+    border: 3px solid #F5F0BB;  
+  }
+
+h2 {
+    position: absolute;
+    color: #292D32;
+    left: 3rem;
+    font-weight: 600;
+    text-shadow: 2px 2px 2px rgba(75, 75, 75, 0.5);
+    margin: 0; 
+    line-height: 4rem; 
+}
+
+h3 {
+    color: #F5F0BB;
+    font-weight: bold; 
+    margin: 10px 0; 
+    text-shadow: 2px 2px 2px rgba(152, 152, 152, 0.616);
+}
+
+.titulo {
+  background-color: #F5F0BB;
+  width: 100%;
+  height: 4rem; 
+  position: absolute;
+  top: 11rem; 
+}
+
+/*Formatações de botões*/
+
+.divlogo {
+  display: flex;
+  float: inline;
+  align-items: center;
+  width: 100%;
+  justify-content: left;
+}
+
+.logo {
+  width: 16em;
+}
+
+header {
+  display: flex;
+  align-items: center;
+}
+
+
+button {
+  border: none;
+  background-color: #00e1bc;
+  text-align: center;
+  color: #f5f0bb;
+  font-size: 1.5em;
+  margin: .25rem .125rem;
+  cursor: pointer;
+  border-radius: .75rem;
+  font-weight: bold;
+  font-family: "roboto";
+  transition-duration: 0.4s;
+}
+
+.botaoPerfil img {
+  height: 100%;
+  width: 60%;
+}
+
+.botaoPerfil {
+  border: none;
+  background-color: #001c30;
+  text-align: center;
+  margin: 4px 2px;
+  cursor: pointer;
+  transition-duration: 0.4s;
+}
+
+
+.botaoIcone {
+  border: none;
+  background-color: #f5f0bb;
+  padding: 2%;
+  text-align: center;
+  color: #000000;
+  font-size: 1.3em;
+  margin: 4px 2px;
+  cursor: pointer;
+  border-radius: 12px;
+  font-weight: bold;
+  font-family: "roboto";
+  transition-duration: 0.4s;
+}
+
+button img {
+  height: 80%;
+  width: 30%;
+  padding-right: 8%;
+  justify-self: start;
+  vertical-align: middle;
+}
+
+.botaoIcone:hover {
+  background-color: #00e1bc;
+  /* Green */
+  color: #f5f0bb;
+}
+
+.botaoPerfil:hover {
+  opacity: 0.5;
+}
+
+button:active {
+  background-color: #b3af87;
+  box-shadow: 0 5px #001c30;
+  transform: translateY(2px);
+}
+
+.botoesheader {
+  align-items: center;
+  width: 100%;
+  text-align: right;
+  margin-top: 2.5rem;
+  /*talvez tirar*/
+}
+
+.logo {
+  position: absolute;
+  top: 1rem;
+  left: 5rem;
+  width: 17rem;
+  height: auto;
+}
+
+#btn-finalizar {
+  width: 10rem;
+  height: auto;
+  text-align: center;
+  font-size: 1.5625rem;
+  font-weight: 600;
+  text-shadow: 0.125rem 0.125rem 0.125rem rgba(75, 75, 75, 0.5);
+  box-shadow: rgba(0, 0, 0, 0.4) 0rem 2px 0.25rem, rgba(0, 0, 0, 0.3) 0px 7px 13px -3px, rgba(0, 0, 0, 0.2) 0px -3px 0px inset;
+  background-color: #F5F0BB;
+  color: #292D32;
+  border-radius: 12px;
+  position: fixed; 
+  padding: .3125rem;
+  bottom: 2%;
+  right: 5%;
+}
+
+#btn-finalizar:hover {
+  background-color: #00E1BC;
+  color: #F5F0BB;
+  text-shadow: 2px 2px 2px rgba(75, 75, 75, 0.5);
+}
+
+/*Formatações de tabela*/
+.quizzes {
+  margin: 10% auto; 
+  width:90%;
+  max-height: 50vh;
+  position: relative;
+  overflow-y: auto;
+  cursor: pointer;
+}
+
+
+.selecionaQuiz {
+    padding-right: 40px; 
+    text-align: left; 
+    cursor: pointer;
+  }
+
+table {
+    border-collapse: collapse;
+    width: 100%;
+  }
+  
+  table, td {
+    border: none;
+    border-radius: .625rem; 
+  }
+  
+  td {
+    padding: .625rem;
+    width: 81.25rem;
+    text-align: left;
+  }
+  
+  tr:nth-child(even) {
+    background-color: #84815f;
+  }
+  
+  tr:nth-child(odd) {
+    background-color: #F5F0BB;
+  }
+  
+  tr:hover td {
+    text-decoration: underline;
+}
+
+/*scrollbar da tabela*/
+.quizzes::-webkit-scrollbar {
+  width: 8px;
+}
+
+.quizzes::-webkit-scrollbar-track {
+  background: #09273c;
+}
+
+.quizzes::-webkit-scrollbar-thumb {
+  background-color: #00E1BC;
+  border-radius: 20px;
+  border: 3px solid #F5F0BB;
+}
+
+
+@media screen and (max-width: 768px) {
+  .divlogo {
+    width: 100%;
+}
+
+.logo {
+    width: 55%;
+    align-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.botoesheader {
+    width: 90%;
+    position: absolute;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    margin-top: 95%;
+    padding: 0% 5%;
+}
+
+.titulo {
+    width: 100%;
+    position: relative;
+    margin-top: 20%;
+    text-align: center;
+}
+
+.quizzes{
+  margin-top: 50%;
+  }
+
+  #btn-finalizar{
+    position: relative;
+    margin-left: 35%;
+
+  }
+  body{
+    overflow-y: scroll;
+  }
+}
+
+
+
