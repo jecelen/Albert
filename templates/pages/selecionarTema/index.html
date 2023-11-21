@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <link href="../../../static/selecionarTema/style.css" rel="stylesheet" type="text/css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Overlock+SC&display=swap"
+      rel="stylesheet"
+    />
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width-initial-scale=100%" />
+    <script src="../../../static/selecionarTema/script.js"></script>
+    <title>Selecione Tema: Albert</title>
+  </head>
+
+  <body>
+    <header>
+      <div class="divlogo">
+        <img class="logo" src="../../../static/assets/Albert.png" alt="Logo Albert" />
+      </div>
+      <div class="botoesheader">
+        <button class="botaoIconeMobile" type="button" onclick="sair()">
+          <img src="../../../static/assets/logout.png" alt="Icone Sair" />
+        </button>
+        <button class="botaoIcone" type="button" onclick="sair()">
+          <img src="../../../static/assets/logout.png" alt="Icone Sair" />Sair
+        </button>
+        <button class="botaoPerfil" type="button" onclick="meuPerfil()">
+          <img src="../../../static/assets/user.png" alt="Icone Perfil" />
+        </button>
+      </div>
+    </header>
+    <div class="page">
+      <h1>Selecione o tema</h1>
+      <div class="container">
+        <div class="c1">
+          <button class="bigBotaoA" type="button" onclick="temaHistoria()">
+            História<br /><img
+              src="../../../static/assets/historia.png"
+              alt="Icone história"
+            />
+          </button>
+          <button class="bigBotaoB" type="button" onclick="sembd()">
+            <img
+              src="../../../static/assets/geografia.png"
+              alt="Icone geografia"
+            /><br />Geografia
+          </button>
+        </div>
+        <div class="c2">
+          <button
+            class="bigBotaoA"
+            id="esp"
+            type="button"
+            onclick="sembd()"
+          >
+            Esportes<br /><img
+              src="../../../static/assets/esportes.png"
+              alt="Icone esportes"
+            />
+          </button>
+          <button
+            class="bigBotaoB"
+            id="bio"
+            type="button"
+            onclick="sembd()"
+          >
+            <img
+              src="../../../static/assets/biologia.png"
+              alt="Icone biologia"
+            /><br />Biologia
+          </button>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

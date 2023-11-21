@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="../../../static/perfilUsuario/style.css" />
+    <script src="../../../static/perfilUsuario/script.js"></script>
+    <title>Perfil Usuário</title>
+  </head>
+  <body>
+    <header>
+      <div class="divlogo">
+        <img class="logo" src="../../../static/assets/Albert.png" alt="Logo Albert" />
+      </div>
+      <div class="dir">
+        <div class="voltar">
+          <button class="botaoIcone" type="button" onclick="voltar()">
+            <img src="../../../static/assets/icone_voltar.png" alt="Icone Voltar" />Voltar
+          </button>
+          <button class="botaoPerfil" type="button" onclick="meuPerfil()">
+            <img src="../../../static/assets/user.png" alt="Icone Perfil" />
+          </button>
+        </div>
+      </div>
+    </header>
+    <div class="container">
+      <script>
+        user();
+      </script>
+      <div class="tabelaA">
+        Usuário
+        <p id="nome">Nome do Usuário</p>
+        <img src="../../../static/assets/editar_azul.png" alt="Icone Editar" />
+      </div>
+      <div class="tabelaB">
+        E-mail
+        <p id="mail">e-maildousuário@gmail.com</p>
+        <img src="../../../static/assets/editar_azul.png" alt="Icone Editar" />
+      </div>
+      <div class="tabelaC" id="senha">
+        Senha: ************
+        <img src="../../../static/assets/editar_azul.png" alt="Icone Editar" />
+      </div>
+    </div>
+    <div class="salvar">
+      <button class="botaoIcone" type="button" onclick="Salvar()">
+        Salvar <img src="../../../static/assets/check.png" alt="Icone Check" />
+      </button>
+    </div>
+  </body>
+</html>

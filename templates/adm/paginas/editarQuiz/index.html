@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Quicksand&display=swap" rel="stylesheet" />
+    <script src="script.js"></script>
+    <title>ADM: Editar quiz</title>
+  </head>
+  <body>
+
+      <!-- conteúdo no topo (logo, sair, perfil e faixa "criar quiz") -->
+      <header>
+        <div class="divlogo">
+          <a href="../../../adm/index.html">
+            <img class="logo" src="../../../assets/logo.png" alt="Logo Albert" /></a>
+        </div>
+        <div class="botoesheader">
+          <button class="botaoIcone" type="button" onclick="sair()">
+            <img src="../../../assets/logout.png" alt="Icone Sair" />Sair
+          </button>
+          <button class="botaoPerfil" type="button" onclick="meuPerfil()">
+            <img src="../../../assets/user.png" alt="Icone Perfil" />
+          </button>
+        </div>
+      </header>
+    
+    <div class="titulo">
+      <h2>Meus quizzes > <span id="temaSelecionado">Tema Selecionado</span></h2>
+    </div>
+
+    
+   
+    <!-- Caixas para inserir informações -->
+    <div class="quizzes">
+      <table id="tabela">
+        <tbody>
+          <tr>
+            <td class="selecionaQuiz">Corpo humano</td>
+          </tr>
+          <tr>
+            <td class="selecionaQuiz">Outro quiz...</td>
+          </tr>
+          <tr>
+            <td class="selecionaQuiz">Outro quiz...</td>
+          </tr>
+          <tr>
+            <td class="selecionaQuiz">Outro quiz...</td>
+          </tr>
+          <tr>
+            <td class="selecionaQuiz">Outro quiz...</td>
+          </tr>
+          <tr>
+            <td class="selecionaQuiz">Outro quiz...</td>
+          </tr>
+          <tr>
+            <td class="selecionaQuiz">Outro quiz...</td>
+          </tr>
+          <tr>
+            <td class="selecionaQuiz">Outro quiz...</td>
+          </tr>
+          <tr>
+            <td class="selecionaQuiz">Outro quiz...</td>
+          </tr>
+         
+        </tbody>
+      </table>
+    </div>
+
+    <div class="botaoFinalizar">
+      <button type="button" id="btn-finalizar" onclick="finalizarPag()">Finalizar</button><br><br><br>
+    </div>
+
+  
+  
+
+  </body>
+</html>

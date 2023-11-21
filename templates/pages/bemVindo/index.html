@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <link href="../../../static/bemVindo/style.css" rel="stylesheet" type="text/css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Quicksand&display=swap"
+      rel="stylesheet"
+    />
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="../../../static/bemVindo/script.js"></script>
+    <title>Bem-vindo: Albert</title>
+  </head>
+
+  <body>
+    <header>
+      <div class="divlogo">
+        <img class="logo" src="../../../static/assets/Albert.png" alt="Logo Albert" />
+      </div>
+      <div class="botoesheader">
+        <button class="botaoIconeMobile" type="button" onclick="sair()">
+          <img src="../../../static/assets/logout.png" alt="Icone Sair" />
+        </button>
+        <button class="botaoIcone" type="button" onclick="sair()">
+          <img src="../../../static/assets/logout.png" alt="Icone Sair" />Sair
+        </button>
+        <button class="botaoPerfil" type="button" onclick="meuPerfil()">
+          <img src="../../../static/assets/user.png" alt="Icone Perfil" />
+        </button>
+      </div>
+    </header>
+    <div class="page">
+      <h2 id="bemVindo">
+        Seja Bem Vindo,
+        <script>
+          nomeUser();
+        </script>
+      </h2>
+      <hr />
+      <div class="container">
+        <div class="esq">
+          <button class="bigBotao" type="button" onclick="novoJogo()">
+            <img src="../../../static/bemVindo/perguntas.png" alt="Icone Novo Jogo" />Novo Jogo
+          </button>
+        </div>
+        <div class="dir">
+          <button class="bigBotao" type="button" onclick="verRanking()">
+            <img src="../../../static/assets/ranking.png" alt="Icone Ranking" />Ranking
+          </button>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
