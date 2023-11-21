@@ -1,0 +1,189 @@
+body {
+  background-color: #001c30;
+  background-image: url(background.png);
+  background-repeat: no-repeat;
+  background-position: right;
+  background-size: cover;
+}
+
+button {
+  border: none;
+  background-color: #00e1bc;
+  padding: 2% 5%;
+  text-align: center;
+  color: #f5f0bb;
+  font-size: 1.5em;
+  margin: 4px 2px;
+  cursor: pointer;
+  border-radius: 12px;
+  font-weight: bold;
+  font-family: "Quicksand", sans-serif;
+  transition-duration: 0.4s;
+}
+
+.botaoIcone {
+  border: none;
+  background-color: #00e1bc;
+  padding: 2%;
+  text-align: center;
+  color: #f5f0bb;
+  font-size: 1.3em;
+  margin: 4px 2px;
+  cursor: pointer;
+  border-radius: 12px;
+  font-weight: bold;
+  font-family: "Quicksand", sans-serif;
+  transition-duration: 0.4s;
+}
+
+button img {
+  height: 80%;
+  width: 25%;
+  padding-right: 8%;
+  justify-self: start;
+  vertical-align: middle;
+}
+button:hover {
+  background-color: #001c30; /* Green */
+  border-color: #f5f0bb;
+  color: #f5f0bb;
+  border: #f5f0bb 2px outset;
+}
+
+button:active {
+  background-color: #b3af87;
+  box-shadow: 0 5px #001c30;
+  transform: translateY(2px);
+}
+
+.logo {
+  width: 25em;
+}
+
+.page {
+  display: inline-flex;
+  height: 88vh;
+  width: 100%;
+  justify-content: center;
+  align-items: center;
+}
+.esq {
+  display: block;
+  height: 90vh;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+}
+.dir {
+  display: flex;
+  width: 100%;
+  align-items: center;
+  justify-content: center;
+  height: fit-content;
+}
+.divlogo {
+  display: flex;
+  float: inline-end;
+  align-items: center;
+  width: 100%;
+  justify-content: right;
+}
+.dirMob {
+  display: none;
+}
+
+.voltar {
+  display: block;
+  float: start;
+  width: 100%;
+  align-items: flex-start;
+  justify-content: start;
+}
+
+.form {
+  display: block;
+  font-family: "Quicksand", sans-serif;
+  font-size: 1.2em;
+  margin: 20% 10% 10% 10%;
+  color: #f5f0bb;
+  align-items: center;
+  justify-content: center;
+}
+
+.entrar {
+  display: flex;
+  margin-right: 10%;
+  align-items: end;
+  justify-content: right;
+}
+
+input {
+  width: 100%;
+  font-size: 1.25em;
+  padding: 2% 5%;
+  margin: 0% 0;
+  box-sizing: border-box;
+  border-radius: 4px;
+}
+
+a {
+  color: #00e1bc;
+}
+
+@media screen and (max-width: 768px) {
+  body {
+    background-image: url(Mobileback.png);
+    background-position: top;
+    background-size: cover;
+  }
+
+  .page {
+    display: block;
+  }
+
+  .botoes {
+    margin: 0%;
+  }
+  .voltar {
+    display: none;
+  }
+  .form {
+    align-items: center;
+    width: 80%;
+    height: fit-content;
+    margin: 0%;
+    margin-top: 60%;
+    margin-left: 10%;
+    font-size: 20px;
+  }
+  .esq {
+    display: block;
+    align-items: center;
+    width: 100%;
+    height: fit-content;
+    justify-content: center;
+  }
+
+  .dir {
+    display: none;
+  }
+  .dirMob {
+    display: flex;
+  }
+
+  .divlogo {
+    text-align: center;
+    width: 100%;
+    display: flex;
+    align-items: start;
+    height: fit-content;
+  }
+  .logo {
+    display: flex;
+    height: fit-content;
+    text-align: center;
+    width: 100%;
+    padding: 0% 20%;
+    align-items: start;
+  }
+}
