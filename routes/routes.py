@@ -37,3 +37,29 @@ def pag_tema():
 @routes_blueprint.route('/historia', methods=['GET'])
 def pag_historia():
     return render_template('pages/temaSelecionado/index.html')
+
+@routes_blueprint.route('/adm', methods=['GET'])
+def pag_adm():
+    return render_template('adm/index.html')
+
+@routes_blueprint.route('/adm/criar', methods=['GET'])
+def pag_criar():
+    return render_template('adm/paginas/criar/index.html')
+
+# rotas para edição de quizz
+
+@routes_blueprint.route('/adm/editarTema', methods=['GET'])
+def pag_editar():
+    return render_template('adm/paginas/editarTema/index.html')
+
+@routes_blueprint.route('/adm/editarQuiz', methods=['GET'])
+def pag_editarQuiz():
+    return render_template('adm/paginas/editarQuiz/index.html')
+
+@routes_blueprint.route('/adm/editarPergunta', methods=['GET'])
+def pag_editarPergunta():
+    return render_template('adm/paginas/editarPergunta/index.html')
+
+@routes_blueprint.route('/adm/editarResposta', methods=['GET'])
+def pag_editarResposta():
+    return render_template('adm/paginas/editarResposta/index.html')
