@@ -10,6 +10,10 @@ def pag_inicial():
 def pag_login():
     return render_template('pages/login/index.html')
 
+@routes_blueprint.route('/recuperarSenha', methods=['GET'])
+def pag_recuperarSenha():
+    return render_template('pages/recuperarSenha/index.html')
+
 @routes_blueprint.route('/registro', methods=['GET'])
 def pag_registro():
     return render_template('pages/registro/index.html')
