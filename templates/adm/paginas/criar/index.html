@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="../../../../static/adm/paginas/criar/style.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Quicksand&display=swap" rel="stylesheet" />
+  <script src="../../../../static/adm/paginas/criar/script.js"></script>
+  <title>ADM: Criar quiz</title>
+</head>
+
+<body>
+
+  <!-- conteúdo no topo (logo, sair, perfil e faixa "criar quiz") -->
+  <header>
+    <div class="divlogo">
+      <a href="../">
+        <img class="logo" src="../../../../static/assets/logo.png" alt="Logo Albert" /></a>
+    </div>
+    <div class="botoesheader">
+      <button class="botaoIcone" type="button" onclick="sair()">
+        <img src="../../../../static/assets/logout.png" alt="Icone Sair" />Sair
+      </button>
+      <button class="botaoPerfil" type="button" onclick="meuPerfil()">
+        <img src="../../../../static/assets/user.png" alt="Icone Perfil" />
+      </button>
+    </div>
+  </header>
+
+  <div class="titulo">
+    <h2>Criar quiz<img src="../../../../static/assets/criar.png" /></h2>
+  </div>
+
+  <!-- Caixas para inserir nome e selecionar categoria -->
+  <div class="criarQuiz">
+    <div>
+      <label for="nomeQuiz">Nome do quiz</label>
+      <input type="text" id="nomeQuiz" name="nomeQuiz">
+    </div>
+    <div>
+      <label for="categoria">Categoria</label>
+      <select id="categoria" name="categoria">
+        <option value="Geografia">Geografia</option>
+        <option value="História">História</option>
+        <option value="Esportes">Esportes</option>
+        <option value="Biologia">Biologia</option>
+      </select>
+
+      <div class="perguntas">
+        <!-- div para perguntas -->
+      </div>
+
+      <div class="botoesCriarQuiz">
+        <button type="button" id="btn-novapergunta" onclick="adicionarPergunta()">Nova pergunta</button>
+        <button type="button" id="btn-finalizarquiz" onclick="finalizarPag()">Finalizar</button><br><br><br>
+      </div>
+    </div>
+  </div>
+
+  <div id="quizData">
+    <!-- div para testes, permite visualizar os dados do quiz criado -->
+  </div>
+
+</body>
+
+</html>

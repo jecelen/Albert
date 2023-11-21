@@ -1,0 +1,207 @@
+
+.divlogo {
+  display: flex;
+  float: inline;
+  align-items: center;
+  width: 100%;
+  justify-content: left;
+}
+
+header {
+  display: flex;
+  align-items: center;
+}
+
+.botoesheader {
+  text-align: right;
+  display: flex;
+  align-items: center;
+  width: 100%;
+  justify-content: end;
+}
+
+body {
+  background-color: #001c30;
+}
+
+
+
+
+.botaoIcone {
+  border: none;
+  background-color: #00e1bc;
+  padding: 2%;
+  text-align: center;
+  color: #f5f0bb;
+  font-size: 1.3em;
+  margin: 4px 2px;
+  cursor: pointer;
+  border-radius: 12px;
+  font-weight: bold;
+  font-family: "roboto";
+  transition-duration: 0.4s;
+}
+
+button img {
+  height: 80%;
+  width: 25%;
+  padding-right: 8%;
+  justify-self: start;
+  vertical-align: middle;
+}
+
+.botaoEditar{
+  background-color: #f5f0bb;
+  color: #001C30;
+}
+
+.botaoIcone:hover {
+  background-color: #001c30; /* Green */
+  color: #f5f0bb;
+}
+
+.botaoPerfil:hover {
+  opacity: 0.5;
+}
+
+button:hover {
+  background-color: #001c30; 
+  border-color: #f5f0bb;
+  color: #f5f0bb;
+  border: #f5f0bb 2px outset;
+}
+
+button:active {
+  background-color: #b3af87;
+  box-shadow: 0 5px #001c30;
+  transform: translateY(2px);
+}
+
+.logo {
+  width: 14em;
+}
+
+.botaoPerfil {
+  border: none;
+  background-color: #001c30;
+  text-align: center;
+  margin: 4px 2px;
+  cursor: pointer;
+  transition-duration: 0.4s;
+}
+.botaoPerfil img {
+  height: 100%;
+  width: 60%;
+}
+
+
+.dir {
+  display: block;
+  height: 95%;
+  align-items: center;
+  justify-content: center;
+  width: 260vh;
+}
+
+
+.voltar {
+  display: flex;
+  float: end;
+  width: 100%;
+  align-items: flex-end;
+  justify-content: end;
+}
+
+.container{
+  display: grid;
+  margin: 10%;
+  
+}
+
+.tabelaA{
+  display: flex;
+  border: none;
+  text-align: end;
+  align-items: center;
+  justify-content: end;
+  background-color: #f5f0bb;
+  font-size: 1.5rem;
+  border-radius: 0px;
+  padding: 0% 0% 0% 0%;
+  width: 100%;
+  color: #001C30;
+  font-weight: bold;
+  font-family: "roboto";
+  transition-duration: 0.4s;
+  margin: 0%;
+}
+
+.tabelaB{
+  display: flex;
+  border: none;
+  text-align: end;
+  align-items: center;
+  justify-content: end;
+  background-color: #BEBA92;
+  font-size: 1.5rem;
+  border-radius: 0px;
+  padding: 0% 0% 0% 0%;
+  width: 100%;
+  color: #001C30;
+  font-weight: bold;
+  font-family: "roboto";
+  transition-duration: 0.4s;
+  margin: 0%;
+}
+
+.tabelaC{
+  display: flex;
+  border: none;
+  text-align: end;
+  align-items: center;
+  justify-content: end;
+  background-color: #f5f0bb;
+  font-size: 1.5rem;
+  border-radius: 0px;
+  padding: 0% 0% 0% 0%;
+  width: 100%;
+  color: #001C30;
+  font-weight: bold;
+  font-family: "roboto";
+  transition-duration: 0.4s;
+  margin: 0%;
+}
+
+.tabelaA img{
+  width: 25px;
+  height: 25px;
+  padding-left: 71%;
+  cursor: pointer;
+}
+
+.tabelaB img{
+  width: 25px;
+  height: 25px;
+  padding-left: 62%;
+  cursor: pointer;
+}
+
+.tabelaC img{
+  width: 25px;
+  height: 25px;
+  padding-left: 73%;
+  cursor: pointer;
+}
+
+.salvar{
+display: flex;
+justify-content: center;
+border-radius: 12px;
+font-size: 1.5rem;
+padding: 0% 0% 0% 0%;
+width: 100%;
+color: #001C30;
+font-weight: bold;
+font-family: "roboto";
+transition-duration: 0.4s;
+}
