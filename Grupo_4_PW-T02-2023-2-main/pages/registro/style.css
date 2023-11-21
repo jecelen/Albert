@@ -1,0 +1,124 @@
+body {
+  background-color: #001c30;
+  background-image: url(background.png);
+  background-repeat: no-repeat;
+  background-position: left;
+  background-size: contain;
+}
+
+button {
+  border: none;
+  background-color: #00e1bc;
+  padding: 2% 5%;
+  text-align: center;
+  color: #f5f0bb;
+  font-size: 1.5em;
+  margin: 4px 2px;
+  cursor: pointer;
+  border-radius: 12px;
+  font-weight: bold;
+  font-family: "roboto";
+  transition-duration: 0.4s;
+}
+
+.botaoIcone {
+  border: none;
+  background-color: #00e1bc;
+  padding: 2%;
+  text-align: center;
+  color: #f5f0bb;
+  font-size: 1.3em;
+  margin: 4px 2px;
+  cursor: pointer;
+  border-radius: 12px;
+  font-weight: bold;
+  font-family: "roboto";
+  transition-duration: 0.4s;
+}
+
+button img {
+  height: 80%;
+  width: 25%;
+  padding-right: 8%;
+  justify-self: start;
+  vertical-align: middle;
+}
+button:hover {
+  background-color: #001c30; /* Green */
+  border-color: #f5f0bb;
+  color: #f5f0bb;
+  border: #f5f0bb 2px outset;
+}
+
+button:active {
+  background-color: #b3af87;
+  box-shadow: 0 5px #001c30;
+  transform: translateY(2px);
+}
+
+.logo {
+  width: 20em;
+}
+
+.page {
+  display: inline-flex;
+  height: 97vh;
+  width: 100%;
+  justify-content: center;
+  align-items: center;
+}
+.dir {
+  display: block;
+  height: 95%;
+  align-items: center;
+  justify-content: center;
+  width: 260vh;
+}
+.esq {
+  display: flex;
+  width: 70%;
+  align-items: center;
+  justify-content: start;
+  height: max-content;
+}
+.divlogo {
+  display: flex;
+  float: inline-end;
+  align-items: center;
+  width: 100%;
+  justify-content: right;
+}
+
+.voltar {
+  display: flex;
+  float: end;
+  width: 100%;
+  align-items: flex-end;
+  justify-content: end;
+}
+
+.form {
+  display: block;
+  font-family: "Quicksand", sans-serif;
+  font-size: 1em;
+  margin: 1% 10%;
+  color: #f5f0bb;
+  align-items: center;
+  justify-content: center;
+}
+
+.registrar {
+  display: flex;
+  margin-right: 10%;
+  align-items: end;
+  justify-content: right;
+}
+
+input {
+  width: 100%;
+  font-size: 1em;
+  padding: 2% 5%;
+  margin: 2% 0;
+  box-sizing: border-box;
+  border-radius: 4px;
+}
