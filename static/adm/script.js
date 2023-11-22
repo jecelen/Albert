@@ -6,10 +6,6 @@ function paginaEditar() {
   window.location.href = "../adm/editarTema";
 }
 
-function paginaDeletar() {
-  window.location.href = "../adm/deletarTema";
-}
-
 function sair() {
   window.location.href = "../";
 }
