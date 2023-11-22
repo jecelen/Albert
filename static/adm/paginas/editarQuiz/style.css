@@ -35,6 +35,7 @@ h2 {
     text-shadow: 2px 2px 2px rgba(75, 75, 75, 0.5);
     margin: 0; 
     line-height: 4rem; 
+    cursor: default;
 }
 
 h3 {
@@ -179,6 +180,40 @@ button:active {
   text-shadow: 2px 2px 2px rgba(75, 75, 75, 0.5);
 }
 
+.btn-deletar {
+  float: right; 
+  cursor: pointer;
+  background: transparent;
+  color: #b40404;
+  margin-left: -10px; 
+}
+
+.btn-deletar img {
+  width: 25px;
+  height: 25px;
+}
+
+.btn-deletar:hover img {
+  transition: transform 0.2s;
+  transform: scale(1.2);
+}
+
+.btn-mudarNomeQuiz {
+  float: right; 
+  cursor: pointer;
+  font-size: .9375rem;
+  background: transparent;
+  color: #001c30;
+  text-align: left;
+  margin-top: 1%;
+  
+}
+
+.btn-mudarNomeQuiz:hover {
+  transition: transform 0.2s;
+  transform: scale(1.1);
+  text-decoration: underline;
+}
 /*Formatações de tabela*/
 .quizzes {
   margin: 10% auto; 
@@ -190,11 +225,6 @@ button:active {
 }
 
 
-.selecionaQuiz {
-    padding-right: 40px; 
-    text-align: left; 
-    cursor: pointer;
-  }
 
 table {
     border-collapse: collapse;
