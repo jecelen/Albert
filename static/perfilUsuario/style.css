@@ -28,6 +28,7 @@ body {
 
 
 .botaoIcone {
+  display: flex;
   border: none;
   background-color: #00e1bc;
   padding: 2%;
@@ -40,6 +41,21 @@ body {
   font-weight: bold;
   font-family: "roboto";
   transition-duration: 0.4s;
+  margin-top: 5%;
+}
+
+.botaoSalvar{
+  display: flex;
+  border: none;
+  background-color: #00e1bc;
+  margin-top: 5%;
+  cursor: pointer;
+  border-radius: 12px;
+  font-weight: bold;
+  font-family: "roboto";
+  transition-duration: 0.4s;
+  justify-content: center;
+  font-size: 1.3em;
 }
 
 button img {
@@ -118,17 +134,57 @@ button:active {
   
 }
 
+#updateForm{
+  display: block;
+}
+
+.linha1{
+  display: flex;
+}
+
+.linha1 input{
+  background-color: #f5f0bb;
+  border: none;
+  width: 70%;
+  font-size: 1rem;
+  font-weight: bold;
+}
+
+.linha2{
+  display: flex;
+}
+
+.linha2 input{
+  background-color: #BEBA92;
+  border: none;
+  width: 70%;
+  font-size: 1rem;
+  font-weight: bold;
+}
+
+.linha3{
+  display: flex;
+}
+
+.linha3 input{
+  background-color: #f5f0bb;
+  border: none;
+  width: 70%;
+  font-size: 1rem;
+  font-weight: bold;
+}
+
 .tabelaA{
   display: flex;
   border: none;
-  text-align: end;
+  text-align: start;
   align-items: center;
-  justify-content: end;
+  justify-content: start;
   background-color: #f5f0bb;
   font-size: 1.5rem;
   border-radius: 0px;
   padding: 0% 0% 0% 0%;
-  width: 100%;
+  width: 19%;
   color: #001C30;
   font-weight: bold;
   font-family: "roboto";
@@ -139,14 +195,14 @@ button:active {
 .tabelaB{
   display: flex;
   border: none;
-  text-align: end;
+  text-align: start;
   align-items: center;
-  justify-content: end;
+  justify-content: start;
   background-color: #BEBA92;
   font-size: 1.5rem;
   border-radius: 0px;
   padding: 0% 0% 0% 0%;
-  width: 100%;
+  width: 19%;
   color: #001C30;
   font-weight: bold;
   font-family: "roboto";
@@ -157,14 +213,14 @@ button:active {
 .tabelaC{
   display: flex;
   border: none;
-  text-align: end;
+  text-align: start;
   align-items: center;
-  justify-content: end;
+  justify-content: start;
   background-color: #f5f0bb;
   font-size: 1.5rem;
   border-radius: 0px;
   padding: 0% 0% 0% 0%;
-  width: 100%;
+  width: 19%;
   color: #001C30;
   font-weight: bold;
   font-family: "roboto";
