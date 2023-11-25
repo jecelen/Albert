@@ -25,3 +25,6 @@ function sair() {
    function temaBiologia(){
      window.location.href = "../rankingSelecionadoBiologia"
    }
+    function voltar(){
+      window.location.href = "../bemVindo";
+    }
