@@ -22,6 +22,9 @@ function temaBiologia() {
   window.location.href = "../biologia";
 }
 
+function voltar(){
+  window.location.href = "../bemVindo";
+}
 
 function sembd() {
   alert(
