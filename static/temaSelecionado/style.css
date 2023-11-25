@@ -1,5 +1,38 @@
+
 body {
   background-color: #001c30;
+}
+
+#container {
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+  text-align: center;
+}
+
+.options-container {
+  display: flex;
+  flex-direction: column;
+  margin-top: 20px;
+}
+
+.option {
+  margin: 5px;
+  padding: 10px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  cursor: pointer;
+  background-color:#f5f0bb;
+  color: #001C30;
+  font-size: 1.5rem;
+  width: 80%;
+  margin-left: 5%;
+  text-align: start;
+  font-family: "roboto";
+}
+
+.option:hover {
+  background-color: #f0f0f0;
 }
 
 .infoPerg{
@@ -7,6 +40,8 @@ body {
   justify-content: center;
   color: #00e1bc;
   font-size: 30px;
+  align-items: center;
+  text-align: center;
 }
 
 .tempoPerg{
@@ -50,14 +85,14 @@ button:focus{
 li{
   list-style: none;
 }
-
+/*
 .container {
   display: grid;
   justify-content: center;
   margin-top: 1%;
   width: 90%;
   height: 15vh;
-}
+}*/
 
 .op1{
   display: block;
@@ -203,18 +238,18 @@ li{
   vertical-align: middle;
 }
 .botaoIcone:hover {
-  background-color: #00e1bc; /* Green */
+  background-color: #00e1bc; 
   color: #f5f0bb;
 }
 .bigBotaoA:hover {
-  background-color: #001c30; /* Green */
+  background-color: #001c30; 
   color: #b3af87;
   border: #f5f0bb 2px outset;
   border-radius: 4px;
 }
 
 .bigBotaoB:hover {
-  background-color: #001c30; /* Green */
+  background-color: #001c30; 
   color: #b3af87;
   border: #f5f0bb 2px outset;
   border-radius: 4px;
@@ -295,3 +330,57 @@ header {
   .col-s-12 {width: 100%;}
  
 }
+/*
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  background-color: #f4f4f4;
+}
+
+#container {
+  background-color: #fff;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+  text-align: center;
+}
+
+.options-container {
+  display: flex;
+  flex-direction: column;
+  margin-top: 20px;
+}
+
+.option {
+  margin: 5px;
+  padding: 10px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.option:hover {
+  background-color: #f0f0f0;
+}
+
+#conferir {
+  background-color: #4caf50;
+  color: #fff;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 16px;
+  margin-top: 20px;
+}
+
+#conferir:hover {
+  background-color: #45a049;
+}
+
+*/
