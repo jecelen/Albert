@@ -6,15 +6,6 @@ body {
     background-size: cover;
 
   }
-  
-h2 {
-    font-family: "Quicksand", sans-serif;
-    position: absolute;
-    color: #8FE8AD;
-    top: 11.25rem;
-    left: 5.625rem;
-    font-weight: 300;
-}
 
 .divlogo {
     display: flex;
@@ -40,9 +31,9 @@ button {
     text-align: center;
     color: #f5f0bb;
     font-size: 1.5em;
-    margin: .25rem .125rem;
+    margin: 10%;
     cursor: pointer;
-    border-radius: .75rem;
+    border-radius: 10%;
     font-weight: bold;
     font-family: "Quicksand", sans-serif;
     transition-duration: 0.4s;
@@ -129,7 +120,7 @@ button.criar, button.editar {
     background: #F5F0BB;
     color: #292D32;
     border: none;
-    border-radius: 0.4375rem;
+    border-radius: 8%;
     font-weight: 700;
     font-size: 2rem;
     text-shadow: 0.125rem 0.125rem 0.125rem rgba(75, 75, 75, 0.5);
@@ -149,11 +140,13 @@ button.criar {
     background-size: 11.25rem;
     background-position: center 25%;
     background-repeat: no-repeat;
+    margin-left: 20%;
 }
 
 button.editar {
     background-image: url('../assets/editar.png');
     background-size: 11.25rem;
+    margin-right: 20%;
     background-position: center 25%;
     background-repeat: no-repeat;
 }
