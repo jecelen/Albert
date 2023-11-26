@@ -10,42 +10,38 @@
   <body>
     <header>
       <div class="divlogo">
-        <img class="logo" src="../../../static/assets/Albert.png" alt="Logo Albert" />
-      </div>
-      <div class="dir">
-        <div class="voltar">
-          <button class="botaoIcone" type="button" onclick="voltar()">
-            <img src="../../../static/assets/icone_voltar.png" alt="Icone Voltar" />Voltar
-          </button>
-          <button class="botaoPerfil" type="button" onclick="meuPerfil()">
+          <img class="logo" src="../../../static/assets/Albert.png" alt="Logo Albert" />
+        </div>
+        <div class="dir">
+          <div class="voltar">
+            <button class="botaoIcone" type="button" onclick="voltar()">
+              <img src="../../../static/assets/icone_voltar.png" alt="Icone Voltar" />Voltar
+            </button>
+            <button class="botaoPerfil" type="button" onclick="meuPerfil()">
             <img src="../../../static/assets/user.png" alt="Icone Perfil" />
           </button>
+          </div>
         </div>
-      </div>
-    </header>
-    <div class="container">
-      <script>
-        user();
-      </script>
-      <div class="tabelaA">
-        Usuário
-        <p id="nome">Nome do Usuário</p>
-        <img src="../../../static/assets/editar_azul.png" alt="Icone Editar" />
-      </div>
-      <div class="tabelaB">
-        E-mail
-        <p id="mail">e-maildousuário@gmail.com</p>
-        <img src="../../../static/assets/editar_azul.png" alt="Icone Editar" />
-      </div>
-      <div class="tabelaC" id="senha">
-        Senha: ************
-        <img src="../../../static/assets/editar_azul.png" alt="Icone Editar" />
-      </div>
-    </div>
-    <div class="salvar">
-      <button class="botaoIcone" type="button" onclick="Salvar()">
-        Salvar <img src="../../../static/assets/check.png" alt="Icone Check" />
-      </button>
-    </div>
+  </header>
+  <div class="container">
+      <!--<div class="tabelaA">Usuário: Nome do Usuário<img src="../../../static/assets/editar_azul.png" alt="Icone Editar"></div>
+      <div class="tabelaB">E-mail: e-maildousuário@gmail.com <img src="../../../static/assets/editar_azul.png" alt="Icone Editar"></div>
+      <div class="tabelaC">Senha: Senha do Usuário <img src="../../../static/assets/editar_azul.png" alt="Icone Editar"></div>-->
+      <form id="updateForm">
+        <div class="linha1">
+        <label class="tabelaA" for="username">Nome de Usuário:</label>
+        <input type="text" id="username" name="username" value="Shawlin Matador de Porco" required>
+        <br></div>
+        <div class="linha2">
+        <label class='tabelaB' for="email">E-mail:</label>
+        <input type="email" id="email" name="email" value="user@mail.com" required>
+        <br></div>
+        <div class="linha3">
+        <label class="tabelaC" for="senha">Senha:</label>
+        <input type="password" id="senha" name="senha" value="docedeleite"  required>
+        <br></div>
+        <button class="botaoSalvar" type="button" onclick="updateUser()">Atualizar Informações <img src="../../../static/assets/check.png" alt=""></button>
+    </form>
+  </div>
   </body>
 </html>
