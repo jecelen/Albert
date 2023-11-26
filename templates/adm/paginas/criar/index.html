@@ -51,18 +51,23 @@
       </select>
 
       <div class="perguntas">
-        <!-- div para perguntas -->
+        <h3>Pergunta</h3>
+        <label for="pergunta"></label>
+        <input type="text" id="pergunta" name="pergunta">
+        <label for="opcao1">1ª Opção:</label>
+        <input type="text" id="opcao1" name="opcao1">
+        <label for="opcao2">2ª Opção:</label>
+        <input type="text" id="opcao2" name="opcao2">
+        <label for="opcao3">3ª Opção:</label>
+        <input type="text" id="opcao3" name="opcao3">
+        <label for="resposta">Resposta Correta:</label>
+        <input type="text" id="resposta" name="resposta">
       </div>
 
       <div class="botoesCriarQuiz">
-        <button type="button" id="btn-novapergunta" onclick="adicionarPergunta()">Nova pergunta</button>
         <button type="button" id="btn-finalizarquiz" onclick="finalizarPag()">Finalizar</button><br><br><br>
       </div>
     </div>
-  </div>
-
-  <div id="quizData">
-    <!-- div para testes, permite visualizar os dados do quiz criado -->
   </div>
 
 </body>
