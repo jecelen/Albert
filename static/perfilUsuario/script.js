@@ -5,105 +5,69 @@ function voltar() {
 function meuPerfil() {
   window.location.href = "../perfil";
 }
-/*
+
 function user() {
-  var nome;
-  var mail;
-  fetch("../../../static/assets/userExemple.json")
-    .then((Response) => Response.json())
-    .then((data) => {
-      nome = data.unome;
-      mail = data.uemail;
-      console.log(nome);
-      document.getElementById("nome").innerHTML = ": " + nome;
-      document.getElementById("mail").innerHTML = ": " + mail;
-      "Seja bem vindo(a), " + nome + "."; 
-      
-    })
-    
-    .catch((error) => {
-      console.error("Erro ao carregar o arquivo JSON:", error);
-    });
-}
-*/
-
-fetch('/autenticar_usuario', {
-  method: 'GET',
-  headers: {
-    'Content-Type': 'application/json',
-  },
-  body: JSON.stringify({ email, senha }),
-})
-.then(response => response.json())
-.then(data => {
-  console.log('Resposta do servidor:', data);
-})
-.catch((error) => {
-  console.error('Erro ao enviar solicitação:', error);
-  alert(error);
-});
-
-// isso daqui era quando ainda era o JSON, e estava funcionando, a missão agora é fazer com o firebase
-function userMail() {
-  var mail;
-  fetch("../../../static/assets/userExemple.json")
-    .then((Response) => Response.json())
-    .then((data) => {
-      mail = data.uemail;
-      document.getElementById("email").value = mail; 
-      
-    })
-    
-    .catch((error) => {
-      console.error("Erro ao carregar o arquivo JSON:", error);
-    });
+  var uid = localStorage.getItem('uid');
+  fetch('/info-usuario', {
+    method: 'GET',
+    headers: {
+      'Authorization': 'Bearer ' + uid,
+    },
+  })
+  .then(response => {
+    if (!response.ok) {
+      throw new Error('Erro ao obter dados do usuário. Status: ' + response.status);
+    }
+    return response.json();
+  })
+  .then(data => {
+    // Preencher o formulário com os dados do usuário obtidos do back-end
+    document.getElementById('email').value = data.email;
+    document.getElementById('senha').value = '***';  // Exibindo asteriscos para a senha
+  })
+  .catch(error => {
+    console.error('Erro ao obter dados do usuário:', error);
+  });
 }
 
-function userSenha() {
-  var senha;
-  fetch("../../../static/assets/userExemple.json")
-    .then((Response) => Response.json())
-    .then((data) => {
-      senha = data.usenha;
-      document.getElementById("senha").value = senha; 
-      
-    })
-    
-    .catch((error) => {
-      console.error("Erro ao carregar o arquivo JSON:", error);
-    });
+function updateUser(){
+    var uid = localStorage.getItem('uid');
+    var novoEmail = document.getElementById("email").value;
+    var novaSenha = document.getElementById("senha").value;
+    console.log(novaSenha);
+
+    var dadosAtualizacao = {
+      uid: uid,
+      email: novoEmail,
+      senha: novaSenha
+  };
+
+  if(novaSenha == '***'){
+    alert('Favor digitar a senha para confirmação.')
+  }
+  
+  else{
+  // Requisição para a rota do backend que atualiza as credenciais
+  fetch('/atualizar_credenciais', {
+      method: 'POST',
+      headers: {
+          'Content-Type': 'application/json',
+      },
+      body: JSON.stringify(dadosAtualizacao),
+  })
+  .then(response => {
+      if (!response.ok) {
+          throw new Error('Erro ao atualizar credenciais. Status: ' + response.status);
+      }
+      return response.json();
+  })
+  .then(data => {
+      console.log('Resposta do servidor:', data);
+      alert('Credenciais atualizadas com sucesso!');
+  })
+  .catch(error => {
+      console.error('Erro ao enviar solicitação:', error);
+      alert(error);
+  });
 }
-
-/*
-let usuario = {
-  username: "Shawlin",
-  email: "user@mail.com",
-  senha: "docedeleite"
-};
-
-// Função para preencher o formulário com as informações do usuário
-function preencherFormulario() {
-  document.getElementById('username').value = usuario.username;
-  document.getElementById('email').value = usuario.email;
-  document.getElementById('senha').value = usuario.senha;
 }
-
-// Função para atualizar as informações do usuário
-function updateUser() {
-  // Obter os valores atualizados do formulário
-  const novoUsername = document.getElementById('username').value;
-  const novoEmail = document.getElementById('email').value;
-  const novaSenha = document.getElementById('senha').value;
-
-  // Atualizar as informações do usuário
-  usuario.username = novoUsername;
-  usuario.email = novoEmail;
-  usuario.senha = novaSenha;
-
-  // Exibir mensagem ou enviar dados atualizados para o servidor (depende do seu caso de uso)
-  console.log("Informações do usuário atualizadas:", usuario);
-}
-
-// Preencher o formulário com as informações do usuário ao carregar a página
-preencherFormulario();
-*/

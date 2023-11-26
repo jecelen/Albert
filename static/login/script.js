@@ -14,13 +14,20 @@ function verificar() {
     },
     body: JSON.stringify({ email, senha }),
   })
-  .then(response => response.json())
+  .then(response => {
+      if (!response.ok) {
+      throw new Error('Usuário e/ou senha incorreto(s). Status: ' + response.status);
+      }
+    return response.json();
+  })
   .then(data => {
     console.log('Resposta do servidor:', data);
     window.location.href = "/bemVindo";
+    localStorage.setItem('uid', data.uid);
   })
   .catch((error) => {
     console.error('Erro ao enviar solicitação:', error);
     alert(error);
   });
-  }
+  
+}

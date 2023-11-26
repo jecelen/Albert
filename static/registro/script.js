@@ -1,5 +1,6 @@
 function registro(){
   var email = document.getElementById("email").value;
+  var nome = document.getElementById("nome").value;
   var senha = document.getElementById("password").value;
   var password2 = document.getElementById("password2").value;
 
@@ -10,7 +11,7 @@ fetch('/registrofirebase', {
   headers: {
     'Content-Type': 'application/json',
   },
-  body: JSON.stringify({ email, senha}),
+  body: JSON.stringify({ email, senha, nome}),
 })
 .then(response => response.json())
 .then(data => {
