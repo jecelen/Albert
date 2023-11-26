@@ -135,8 +135,6 @@ button img {
 }
 
 button:active {
-  background-color: #b3af87;
-  box-shadow: 0 5px #001c30;
   transform: translateY(2px);
 }
 
@@ -231,7 +229,7 @@ button:active {
 /*Formatações de tabela*/
 .quizzes {
   margin: 10% auto; 
-  width:90%;
+  width: 80%;
   max-height: 50vh;
   position: relative;
   overflow-y: auto;
@@ -240,7 +238,8 @@ button:active {
 table {
     border-collapse: collapse;
     width: 100%;
-  }
+    margin: 0 auto;
+}
   
   table, td {
     border: none;
@@ -264,6 +263,8 @@ table {
   tr:hover td {
     text-decoration: underline;
 }
+
+
 
 /*scrollbar da tabela*/
 .quizzes::-webkit-scrollbar {

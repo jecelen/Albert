@@ -2,52 +2,56 @@ function obterParametroDaURL(nome) {
   const urlParams = new URLSearchParams(window.location.search);
   return urlParams.get(nome);
 }
-//window.location.href = `../adm/editarPergunta?tema=${encodeURIComponent(temaSelecionado)}&nomeQuiz=${encodeURIComponent(nomeQuiz)}`;
 
 document.addEventListener('DOMContentLoaded', function () {
+  const temaSelecionado = obterParametroDaURL('tema');
   const nomeQuiz = obterParametroDaURL('nomeQuiz');
-  const quizSelecionado = obterParametroDaURL('nomeQuiz');
 
-  if (quizSelecionado) {
-    document.getElementById('quizSelecionado').innerText = quizSelecionado;
+  if (nomeQuiz) {
+    document.getElementById('quizSelecionado').innerText = nomeQuiz;
 
-    // Construa a URL do Firebase com base no tema selecionado
-    const urlFirebase = `https://albert-17358-default-rtdb.firebaseio.com/Quizzes/${temaSelecionado}/${nomeQuiz}/.json`;
+    const urlFirebase = `https://albert-17358-default-rtdb.firebaseio.com/Quizzes/${temaSelecionado}/${nomeQuiz}.json`;
 
-    // Faça uma solicitação para obter os dados do Firebase
     fetch(urlFirebase)
       .then(response => response.json())
       .then(data => {
-        // Manipule os dados recebidos (nomes dos quizzes)
-        exibirNomesDosQuizzes(data);
+        exibirPerguntas(data);
       })
       .catch(error => console.error('Erro ao obter dados do Firebase:', error));
   } else {
-    console.error('Tema não especificado na URL.');
+    console.error('Nome do Quiz não especificado na URL.');
   }
 });
 
+function exibirPerguntas(data) {
+  const tabela = document.getElementById('tabela');
+  const tbody = tabela.getElementsByTagName('tbody')[0];
 
-function obterDadosEExibirPerguntas(temaSelecionado, nomeQuiz) {
-  // Verifique se o tema e o nome do quiz estão disponíveis
-  if (!temaSelecionado || !nomeQuiz) {
-    console.error('Tema ou nome do quiz não especificado.');
+  tbody.innerHTML = '';
+
+  if (!data) {
+    console.error('Dados de perguntas não encontrados.');
     return;
   }
 
-  // Construa a URL do Firebase com base no tema e nome do quiz
-  const urlFirebase = `https://albert-17358-default-rtdb.firebaseio.com/Quizzes/${temaSelecionado}/${nomeQuiz}/.json`;
-  // Faça uma solicitação para obter os dados do Firebase
-  fetch(urlFirebase)
-    .then(response => response.json())
-    .then(data => {
-      // Manipule os dados recebidos (perguntas do quiz)
-      exibirNomesDasPerguntas(data);
-    })
-    .catch(error => console.error('Erro ao obter dados do Firebase:', error));
+  Object.keys(data).forEach(chavePergunta => {
+    const pergunta = data[chavePergunta]?.Pergunta;
+
+    if (pergunta) {
+
+      const novaLinha = tbody.insertRow();
+      const novaCelula = novaLinha.insertCell(0);
+      
+      const btnPergunta = document.createElement('button');
+      btnPergunta.type = 'button';
+      btnPergunta.className = 'btn-nome-quiz';
+      btnPergunta.textContent = pergunta;
+
+      
+      novaCelula.appendChild(btnPergunta);
+    }
+  });
 }
-
-
 function finalizarPag() {
     window.location.href = '../adm';
 }
@@ -64,7 +68,12 @@ const cells = document.querySelectorAll('selecionaQuiz');
 
 function deletarPergunta(button) {
   var row = button.parentNode.parentNode;
+  console.log(`Deletando pergunta ${chavePergunta} do quiz ${chaveQuiz}`);
   row.parentNode.removeChild(row);
+}
+
+function mudarPergunta(button) {
+
 }
 
 document.addEventListener("DOMContentLoaded", function() {
@@ -88,28 +97,3 @@ document.addEventListener("DOMContentLoaded", function() {
   });
 });
 
-
-function editarTitulo(element) {
-  const textoOriginal = element.textContent;
-
-  const input = document.createElement("input");
-  input.value = textoOriginal;
-
-  element.replaceWith(input);
-
-  input.addEventListener("keyup", function (event) {
-    if (event.key === "Enter") {
-      const novoTexto = input.value;
-      element.textContent = novoTexto;
-      input.replaceWith(element);
-    }
-  });
-
-  input.addEventListener("blur", function () {
-    const novoTexto = input.value;
-    element.textContent = novoTexto;
-    input.replaceWith(element);
-  });
-
-  input.focus();
-}

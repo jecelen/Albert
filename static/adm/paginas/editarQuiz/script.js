@@ -8,15 +8,11 @@ document.addEventListener('DOMContentLoaded', function () {
 
   if (temaSelecionado) {
     document.getElementById('temaSelecionado').innerText = temaSelecionado;
-
-    // Construa a URL do Firebase com base no tema selecionado
     const urlFirebase = `https://albert-17358-default-rtdb.firebaseio.com/Quizzes/${temaSelecionado}/.json`;
 
-    // Faça uma solicitação para obter os dados do Firebase
     fetch(urlFirebase)
       .then(response => response.json())
       .then(data => {
-        // Manipule os dados recebidos (nomes dos quizzes)
         exibirNomesDosQuizzes(data);
       })
       .catch(error => console.error('Erro ao obter dados do Firebase:', error));
@@ -29,38 +25,30 @@ function exibirNomesDosQuizzes(quizzesData) {
   const tabela = document.getElementById('tabela');
   const tbody = tabela.getElementsByTagName('tbody')[0];
 
-  // Limpe o conteúdo atual da tabela
   tbody.innerHTML = '';
 
-  // Assumindo que os dados do Firebase são um objeto onde as chaves são os nomes dos quizzes
   const nomesDosQuizzes = Object.keys(quizzesData);
 
-  // Exemplo: Adicione os nomes dos quizzes como linhas à tabela
   nomesDosQuizzes.forEach(nomeQuiz => {
     const novaLinha = tbody.insertRow();
     const novaCelula = novaLinha.insertCell(0);
 
-    // Crie um botão para o nome do quiz
     const btnNomeQuiz = document.createElement('button');
     btnNomeQuiz.type = 'button';
     btnNomeQuiz.className = 'btn-nome-quiz';
     btnNomeQuiz.textContent = nomeQuiz;
 
-    // Adicione um evento de clique para o botão do nome do quiz
     btnNomeQuiz.onclick = function () {
-      // Redirecione para a página de edição de resposta quando o botão de nome do quiz for clicado
       window.location.href = `../adm/editarPergunta?tema=${encodeURIComponent(temaSelecionado)}&nomeQuiz=${encodeURIComponent(nomeQuiz)}`;
     }
 
-    // Adicione o botão do nome do quiz à célula
     novaCelula.appendChild(btnNomeQuiz);
 
-    // Adicione os botões 'Deletar' e 'Mudar Nome' à célula, se necessário
     const btnDeletar = document.createElement('button');
     btnDeletar.type = 'button';
     btnDeletar.className = 'btn-deletar';
     btnDeletar.onclick = function () {
-      deletarQuiz(this);
+      deletarQuiz(temaSelecionado, nomeQuiz, this);
     };
     btnDeletar.innerHTML = '<img src="../../../../static/assets/trash.png">';
     novaCelula.appendChild(btnDeletar);
@@ -68,7 +56,6 @@ function exibirNomesDosQuizzes(quizzesData) {
     const btnMudarNomeQuiz = document.createElement('button');
     btnMudarNomeQuiz.type = 'button';
     btnMudarNomeQuiz.className = 'btn-mudarNomeQuiz';
-    // Adicione a lógica para mudar o nome do quiz, se necessário
     btnMudarNomeQuiz.onclick = function () {
       mudarNomeQuiz(this);
     };
@@ -95,9 +82,25 @@ function mudarNomeQuiz(button) {
 
 }
 
-function deletarQuiz(button) {
+function deletarQuiz(temaSelecionado, nomeQuiz, button) {
   var row = button.parentNode.parentNode;
   row.parentNode.removeChild(row);
+
+  const urlFirebase = `https://albert-17358-default-rtdb.firebaseio.com/Quizzes/${temaSelecionado}/${nomeQuiz}.json`;
+
+  fetch(urlFirebase, {
+    method: 'DELETE',
+    headers: {
+      'Content-Type': 'application/json',
+    },
+  })
+  .then(response => {
+    if (!response.ok) {
+      throw new Error(`Erro ao deletar quiz: ${response.status} - ${response.statusText}`);
+    }
+    console.log('Quiz deletado com sucesso.');
+  })
+  .catch(error => console.error('Erro ao deletar quiz:', error));
 }
 
 document.addEventListener("DOMContentLoaded", function() {
@@ -115,11 +118,16 @@ document.addEventListener("DOMContentLoaded", function() {
   const btnDeletar = document.querySelectorAll('.btn-deletar');
   btnDeletar.forEach((button) => {
     button.addEventListener('click', (event) => {
-      event.stopPropagation(); 
-      deletarQuiz(button);
+      event.stopPropagation();
+
+      const temaSelecionado = obterParametroDaURL('tema');
+      const nomeQuiz = button.parentNode.querySelector('.btn-nome-quiz').textContent;
+
+      deletarQuiz(temaSelecionado, nomeQuiz, button);
     });
   });
 });
+
 
 
 //document.addEventListener("DOMContentLoaded", function() {
