@@ -23,25 +23,23 @@
           </div>
         </div>
   </header>
+  
   <div class="container">
       <!--<div class="tabelaA">Usuário: Nome do Usuário<img src="../../../static/assets/editar_azul.png" alt="Icone Editar"></div>
       <div class="tabelaB">E-mail: e-maildousuário@gmail.com <img src="../../../static/assets/editar_azul.png" alt="Icone Editar"></div>
       <div class="tabelaC">Senha: Senha do Usuário <img src="../../../static/assets/editar_azul.png" alt="Icone Editar"></div>-->
       <form id="updateForm">
-        <div class="linha1">
-        <label class="tabelaA" for="username">Nome de Usuário:</label>
-        <input type="text" id="username" name="username" value="Shawlin Matador de Porco" required>
-        <br></div>
         <div class="linha2">
         <label class='tabelaB' for="email">E-mail:</label>
-        <input type="email" id="email" name="email" value="user@mail.com" required>
+        <input type="email" id="email" name="email" required>
         <br></div>
         <div class="linha3">
         <label class="tabelaC" for="senha">Senha:</label>
-        <input type="password" id="senha" name="senha" value="docedeleite"  required>
+        <input type="password" id="senha" name="senha" required>
         <br></div>
         <button class="botaoSalvar" type="button" onclick="updateUser()">Atualizar Informações <img src="../../../static/assets/check.png" alt=""></button>
     </form>
   </div>
+  <script>userMail(); userSenha();</script>
   </body>
 </html>
