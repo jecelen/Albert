@@ -32,7 +32,6 @@ h2 {
     color: #292D32;
     left: 3rem;
     font-weight: 600;
-    text-shadow: 2px 2px 2px rgba(75, 75, 75, 0.5);
     margin: 0; 
     line-height: 4rem; 
     cursor: default;
@@ -214,6 +213,21 @@ button:active {
   transform: scale(1.1);
   text-decoration: underline;
 }
+
+.btn-nome-quiz {
+  float: left; 
+  cursor: pointer;
+  font-size: .9375rem;
+  background: transparent;
+  color: #001c30;
+  text-align: left;
+  margin-top: 1%;
+}
+
+.btn-nome-quiz:hover {
+  transition: transform 0.2s;
+  text-decoration: underline;
+}
 /*Formatações de tabela*/
 .quizzes {
   margin: 10% auto; 
@@ -221,10 +235,7 @@ button:active {
   max-height: 50vh;
   position: relative;
   overflow-y: auto;
-  cursor: pointer;
 }
-
-
 
 table {
     border-collapse: collapse;
@@ -237,9 +248,9 @@ table {
   }
   
   td {
-    padding: .625rem;
+    padding: .3125rem;
     width: 81.25rem;
-    text-align: left;
+    text-align: left; 
   }
   
   tr:nth-child(even) {

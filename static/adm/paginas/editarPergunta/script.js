@@ -1,3 +1,53 @@
+function obterParametroDaURL(nome) {
+  const urlParams = new URLSearchParams(window.location.search);
+  return urlParams.get(nome);
+}
+//window.location.href = `../adm/editarPergunta?tema=${encodeURIComponent(temaSelecionado)}&nomeQuiz=${encodeURIComponent(nomeQuiz)}`;
+
+document.addEventListener('DOMContentLoaded', function () {
+  const nomeQuiz = obterParametroDaURL('nomeQuiz');
+  const quizSelecionado = obterParametroDaURL('nomeQuiz');
+
+  if (quizSelecionado) {
+    document.getElementById('quizSelecionado').innerText = quizSelecionado;
+
+    // Construa a URL do Firebase com base no tema selecionado
+    const urlFirebase = `https://albert-17358-default-rtdb.firebaseio.com/Quizzes/${temaSelecionado}/${nomeQuiz}/.json`;
+
+    // Faça uma solicitação para obter os dados do Firebase
+    fetch(urlFirebase)
+      .then(response => response.json())
+      .then(data => {
+        // Manipule os dados recebidos (nomes dos quizzes)
+        exibirNomesDosQuizzes(data);
+      })
+      .catch(error => console.error('Erro ao obter dados do Firebase:', error));
+  } else {
+    console.error('Tema não especificado na URL.');
+  }
+});
+
+
+function obterDadosEExibirPerguntas(temaSelecionado, nomeQuiz) {
+  // Verifique se o tema e o nome do quiz estão disponíveis
+  if (!temaSelecionado || !nomeQuiz) {
+    console.error('Tema ou nome do quiz não especificado.');
+    return;
+  }
+
+  // Construa a URL do Firebase com base no tema e nome do quiz
+  const urlFirebase = `https://albert-17358-default-rtdb.firebaseio.com/Quizzes/${temaSelecionado}/${nomeQuiz}/.json`;
+  // Faça uma solicitação para obter os dados do Firebase
+  fetch(urlFirebase)
+    .then(response => response.json())
+    .then(data => {
+      // Manipule os dados recebidos (perguntas do quiz)
+      exibirNomesDasPerguntas(data);
+    })
+    .catch(error => console.error('Erro ao obter dados do Firebase:', error));
+}
+
+
 function finalizarPag() {
     window.location.href = '../adm';
 }

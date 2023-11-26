@@ -11,19 +11,18 @@ function voltarPag() {
     window.location.href = '../adm';
 }
 
-function temaBiologia(){
-  window.location.href = "../adm/editarQuiz";
+function temaBiologia() {
+  window.location.href = "../adm/editarQuiz?tema=Biologia";
 }
 
-// function temaGeografia(){
-//   window.location.href = "../adm/paginas/editarQuiz/index.html";
-// }
+function temaGeografia() {
+  window.location.href = "../adm/editarQuiz?tema=Geografia";
+}
 
-// function temaHistoria(){
-//   window.location.href = "../../../adm/paginas/editarQuiz/index.html";
-// }
+function temaHistoria() {
+  window.location.href = "../adm/editarQuiz?tema=Historia";
+}
 
-// function temaEsportes(){
-//   window.location.href = "../../../adm/paginas/editarQuiz/index.html";
-// }
-
+function temaEsportes() {
+  window.location.href = "../adm/editarQuiz?tema=Esportes";
+}
