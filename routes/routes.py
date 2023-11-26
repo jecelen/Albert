@@ -2,6 +2,7 @@ from flask import Blueprint, render_template, Flask, request, jsonify
 import requests
 import firebase_admin
 from firebase_admin import credentials, auth, db
+import random
 
 caminho_app = "./firebase.json"
 cred = credentials.Certificate(caminho_app)
@@ -115,18 +116,15 @@ def registrar_usuario():
 
     # URL para registrar usuário no Firebase Authentication
     firebase_auth_url = f"https://identitytoolkit.googleapis.com/v1/accounts:signUp?key={SUA_CHAVE_API}"
-    
-    # Payload para o registro do usuário
+
     payload = {
         "email": email,
         "password": senha,
         "returnSecureToken": True
     }
 
-    # Envia a solicitação para o Firebase Authentication
     response = requests.post(firebase_auth_url, json=payload)
 
-    # Manipula a resposta do Firebase Authentication
     if response.status_code == 200:
         # Obtém o localId após o registro bem-sucedido
         local_id = response.json().get('localId')
@@ -145,10 +143,8 @@ def registrar_usuario():
         ref = db.reference(caminho_do_no)
         ref.set(novo_user)
 
-        # Responde ao front-end com a resposta do Firebase Authentication
         return jsonify(response.json())
     else:
-        # Se houver um erro, imprime detalhes do erro e responde com um erro 500
         print(response.json())
         return jsonify({"error": "Falha no registro do usuário"}), 500
 
@@ -169,10 +165,8 @@ def autenticar_usuario():
 
     if response.status_code == 200:
         local_id = response.json().get('localId')
-        # Adicione o token à resposta
         return jsonify({"uid": local_id})
     else:
-        # Se houver um erro, imprima detalhes do erro
         print(response.json())
         return jsonify({"error": "Falha na autenticação"}), 500
     
@@ -188,7 +182,6 @@ def recupera_seha():
     email = dados_recebidos.get('email', '')
 
     try:
-        # Enviar e-mail de redefinição de senha
         auth.generate_password_reset_link(email)
         resposta = {"mensagem": f"E-mail de redefinição de senha enviado para {email}"}
         return jsonify(resposta), 200
@@ -204,7 +197,6 @@ def obter_info_usuario():
     print(uid)
     caminho_do_no = f'Usuario/{uid}'
 
-# Recupere os dados do nó especificado
     ref = db.reference(caminho_do_no)
     dados = ref.get()
 
@@ -212,9 +204,7 @@ def obter_info_usuario():
         email = dados.get('email', '')
         nome = dados.get('nome', '')
         senha = dados.get('senha', '')
-        # Adicione mais campos conforme necessário
-
-        # Agora você pode fazer o que quiser com os dados
+ 
         return jsonify({'email': email, 'nome': nome, 'senha': senha})
     else:
         return jsonify({'erro': 'Usuário não encontrado'}), 404
@@ -261,14 +251,28 @@ def criar():
     caminho_do_no = f'Quizzes/{tema}/{quiz}'
 
     nova_pergunta = {
-        'pergunta': pergunta,
-        'opcao1': op1,
-        'opcao2': op2,
-        'opcao3': op3,
-        'resposta_correta': rc
+        'Perguntas': pergunta,
+        'Opcao1': op1,
+        'Opcao2': op2,
+        'Opcao3': op3,
+        'RespostaCorreta': rc
     }
 
     ref = db.reference(caminho_do_no)
     ref.push().set(nova_pergunta)
 
     return jsonify({"mensagem": "Pergunta criada com sucesso!"})
+
+@routes_blueprint.route('/obter-perguntas/<tema>', methods=['GET'])
+def obter_perguntas(tema):
+    caminho_do_no = f'Quizzes/{tema}'
+
+    ref = db.reference(caminho_do_no)
+    quiz_data = ref.get()
+
+    if quiz_data:
+        quiz_retornado = random.choice(list(quiz_data.values()))
+
+        return jsonify({"quiz": quiz_retornado})
+    else:
+        return jsonify({"mensagem": "Nenhum quiz encontrado para este tema"})
