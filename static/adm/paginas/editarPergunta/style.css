@@ -217,7 +217,7 @@ button:active {
 /*Formatações de tabela*/
 .quizzes {
   margin: 10% auto; 
-  width:80%;
+  width:90%;
   max-height: 50vh;
   position: relative;
   overflow-y: auto;

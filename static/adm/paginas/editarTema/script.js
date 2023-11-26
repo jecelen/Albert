@@ -20,7 +20,7 @@ function temaGeografia() {
 }
 
 function temaHistoria() {
-  window.location.href = "../adm/editarQuiz?tema=História";
+  window.location.href = "../adm/editarQuiz?tema=Historia";
 }
 
 function temaEsportes() {
