@@ -239,9 +239,36 @@ def atualizar_credenciais():
         ref.update({
             'email': novo_email,
             'senha': nova_senha
-
         })
 
         return jsonify({"mensagem": "Credenciais atualizadas com sucesso"})
     except auth.AuthError as e:
         return jsonify({"error": str(e)}), 400
+    
+
+@routes_blueprint.route('/criar_pergunta', methods=['POST'])
+def criar():
+    dados = request.get_json()
+
+    quiz = dados.get('quiz')
+    tema = dados.get('tema')
+    pergunta = dados.get('pergunta')
+    op1 = dados.get('op1')
+    op2 = dados.get('op2')
+    op3 = dados.get('op3')
+    rc = dados.get('rc')
+
+    caminho_do_no = f'Quizzes/{tema}/{quiz}'
+
+    nova_pergunta = {
+        'pergunta': pergunta,
+        'opcao1': op1,
+        'opcao2': op2,
+        'opcao3': op3,
+        'resposta_correta': rc
+    }
+
+    ref = db.reference(caminho_do_no)
+    ref.push().set(nova_pergunta)
+
+    return jsonify({"mensagem": "Pergunta criada com sucesso!"})
