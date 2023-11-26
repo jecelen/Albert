@@ -8,6 +8,7 @@
     <title>Perfil Usuário</title>
   </head>
   <body>
+    <script>user();</script>
     <header>
       <div class="divlogo">
           <img class="logo" src="../../../static/assets/Albert.png" alt="Logo Albert" />
@@ -25,21 +26,17 @@
   </header>
   
   <div class="container">
-      <!--<div class="tabelaA">Usuário: Nome do Usuário<img src="../../../static/assets/editar_azul.png" alt="Icone Editar"></div>
-      <div class="tabelaB">E-mail: e-maildousuário@gmail.com <img src="../../../static/assets/editar_azul.png" alt="Icone Editar"></div>
-      <div class="tabelaC">Senha: Senha do Usuário <img src="../../../static/assets/editar_azul.png" alt="Icone Editar"></div>-->
       <form id="updateForm">
         <div class="linha2">
         <label class='tabelaB' for="email">E-mail:</label>
-        <input type="email" id="email" name="email" required>
+        <input type="email" id="email" name="email">
         <br></div>
         <div class="linha3">
         <label class="tabelaC" for="senha">Senha:</label>
-        <input type="password" id="senha" name="senha" required>
+        <input type="password" id="senha" name="senha">
         <br></div>
-        <button class="botaoSalvar" type="button" onclick="updateUser()">Atualizar Informações <img src="../../../static/assets/check.png" alt=""></button>
+        <button class="botaoSalvar" type="button" onclick="updateUser();">Atualizar Informações <img src="../../../static/assets/check.png" alt=""></button>
     </form>
   </div>
-  <script>userMail(); userSenha();</script>
   </body>
 </html>
