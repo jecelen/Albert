@@ -2,15 +2,15 @@ function registro(){
   var email = document.getElementById("email").value;
   var senha = document.getElementById("password").value;
   var password2 = document.getElementById("password2").value;
-  var nome = document.getElementById("nome").value;
 
+if(password2 == senha){
 
 fetch('/registrofirebase', {
   method: 'POST',
   headers: {
     'Content-Type': 'application/json',
   },
-  body: JSON.stringify({ email, senha, nome }),
+  body: JSON.stringify({ email, senha}),
 })
 .then(response => response.json())
 .then(data => {
@@ -21,6 +21,10 @@ fetch('/registrofirebase', {
 .catch((error) => {
   console.error('Erro ao enviar solicitação:', error);
 });
+}
+else{
+  alert('As senhas digitadas não são iguais.')
+}
 }
 
 function voltar() {
