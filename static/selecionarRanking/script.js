@@ -10,18 +10,21 @@ function sair() {
     window.location.href = "../rankingSelecionado"
   }
 
-  // function temaHistoria(){
-  //   window.location.href = "../rankingSelecionado/index.html"
-  // }
+   function temaHistoria(){
+     window.location.href = "../rankingSelecionadoHistoria"
+   }
 
-  // function temaGeografia(){
-  //   window.location.href = "../rankingSelecionado/index.html"
-  // }
+   function temaGeografia(){
+     window.location.href = "../rankingSelecionadoGeografia"
+  }
 
-  // function temaEsportes(){
-  //   window.location.href = "../rankingSelecionado/index.html"
-  // }
+   function temaEsportes(){
+     window.location.href = "../rankingSelecionadoEsporte"
+   }
 
-  // function temaBiologia(){
-  //   window.location.href = "../rankingSelecionado/index.html"
-  // }
+   function temaBiologia(){
+     window.location.href = "../rankingSelecionadoBiologia"
+   }
+    function voltar(){
+      window.location.href = "../bemVindo";
+    }

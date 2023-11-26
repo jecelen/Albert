@@ -3,20 +3,24 @@ function voltar() {
 }
 
 function verificar() {
+  
   var email = document.getElementById("email").value;
   var senha = document.getElementById("senha").value;
-  fetch("../../../static/assets/userExemple.json")
-    .then((Response) => Response.json())
-    .then((data) => {
-      if (email == data.uemail && senha == data.usenha) {
-        window.location.href = "../bemVindo";
-      } else if (email == data.admemail && senha == data.admsenha) {
-        window.location.href = "../adm";
-      } else {
-        alert("E-mail ou senha inválido(a)!");
-      }
-    })
-    .catch((error) => {
-      console.error("Erro ao carregar o arquivo JSON:", error);
-    });
-}
+
+  fetch('/autenticar_usuario', {
+    method: 'POST',
+    headers: {
+      'Content-Type': 'application/json',
+    },
+    body: JSON.stringify({ email, senha }),
+  })
+  .then(response => response.json())
+  .then(data => {
+    console.log('Resposta do servidor:', data);
+    window.location.href = "/bemVindo";
+  })
+  .catch((error) => {
+    console.error('Erro ao enviar solicitação:', error);
+    alert(error);
+  });
+  }

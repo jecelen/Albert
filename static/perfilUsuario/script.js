@@ -21,3 +21,35 @@ function user() {
       console.error("Erro ao carregar o arquivo JSON:", error);
     });
 }
+
+let usuario = {
+  username: "Shawlin",
+  email: "user@mail.com",
+  senha: "docedeleite"
+};
+
+// Função para preencher o formulário com as informações do usuário
+function preencherFormulario() {
+  document.getElementById('username').value = usuario.username;
+  document.getElementById('email').value = usuario.email;
+  document.getElementById('senha').value = usuario.senha;
+}
+
+// Função para atualizar as informações do usuário
+function updateUser() {
+  // Obter os valores atualizados do formulário
+  const novoUsername = document.getElementById('username').value;
+  const novoEmail = document.getElementById('email').value;
+  const novaSenha = document.getElementById('senha').value;
+
+  // Atualizar as informações do usuário
+  usuario.username = novoUsername;
+  usuario.email = novoEmail;
+  usuario.senha = novaSenha;
+
+  // Exibir mensagem ou enviar dados atualizados para o servidor (depende do seu caso de uso)
+  console.log("Informações do usuário atualizadas:", usuario);
+}
+
+// Preencher o formulário com as informações do usuário ao carregar a página
+preencherFormulario();

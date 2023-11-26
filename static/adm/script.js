@@ -2,12 +2,12 @@ function paginaCriar() {
   window.location.href = "../adm/criar";
 }
 
-function paginaEditar() {
-  window.location.href = "../adm/editarTema";
+function user(){
+  window.location.href = "../bemVindo";
 }
 
-function paginaDeletar() {
-  window.location.href = "../adm/deletarTema";
+function paginaEditar() {
+  window.location.href = "../adm/editarTema";
 }
 
 function sair() {

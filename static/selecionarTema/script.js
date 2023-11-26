@@ -10,6 +10,22 @@ function temaHistoria() {
   window.location.href = "../historia";
 }
 
+function temaGeografia() {
+  window.location.href = "../geografia";
+}
+
+function temaEsporte() {
+  window.location.href = "../esporte";
+}
+
+function temaBiologia() {
+  window.location.href = "../biologia";
+}
+
+function voltar(){
+  window.location.href = "../bemVindo";
+}
+
 function sembd() {
   alert(
     "Lamentamos muito, mas ainda não temos nosso banco de dados pronto no tema selecionado. (dica: tente história 😉)"

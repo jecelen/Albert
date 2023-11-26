@@ -35,7 +35,9 @@ h2 {
     text-shadow: 2px 2px 2px rgba(75, 75, 75, 0.5);
     margin: 0; 
     line-height: 4rem; 
+    cursor: default;
 }
+
 
 h3 {
     color: #F5F0BB;
@@ -178,6 +180,21 @@ button:active {
   color: #F5F0BB;
   text-shadow: 2px 2px 2px rgba(75, 75, 75, 0.5);
 }
+
+.btn-mudarResposta {
+  float: right; 
+  cursor: pointer;
+  font-size: .9375rem;
+  background: transparent;
+  color: #001c30;
+  text-align: left;
+}
+
+.btn-mudarResposta:hover {
+  transition: transform 0.2s;
+  transform: scale(1.1);
+  text-decoration: underline;
+}
 /*Formatações de tabela*/
 .quizzes {
   margin: 13% auto; 
@@ -237,22 +254,6 @@ table {
   border: 3px solid #F5F0BB;
 }
 
-.btn-deletar {
-  float: right; /* Mantenha-o à direita */
-  cursor: pointer;
-  background: transparent;
-  color: #b40404;
-  margin-left: -10px; /* Ajuste a margem esquerda para alinhá-lo mais à esquerda */
-}
-
-.btn-deletar:hover img {
-  transition: transform 0.2s;
-  transform: scale(1.1);
-}
-
-.perguntaTitulo{
-  cursor: pointer;
-}
 
 @media screen and (max-width: 768px) {
 

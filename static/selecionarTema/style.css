@@ -132,6 +132,12 @@ button:active {
   transform: translateY(2px);
 }
 
+.logoBotao{
+  border: none;
+  background-color: #001c30;
+
+}
+
 .logo {
   width: 14em;
 }

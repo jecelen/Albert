@@ -2,6 +2,10 @@ function sair() {
   window.location.href = "../";
 }
 
+function admin(){
+  window.location.href = "../adm";
+}
+
 function novoJogo() {
   window.location.href = "../selecionarTema";
 }
